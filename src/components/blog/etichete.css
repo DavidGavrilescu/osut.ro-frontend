@@ -1,0 +1,37 @@
+span.tag {
+  background: rgba(140, 140, 140, 0.1);
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+span.tag:hover {
+  background: rgba(160, 160, 160, 0.2);
+  cursor: pointer;
+}
+
+span.tag_mic {
+  display: inline-block;
+  padding: 3px 3px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
+  opacity: 0.6;
+  margin-right: 4px;
+}
+
+span.tag_mic::before {
+  content: "#";
+}
+
+span.tag_mic:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+/*# sourceMappingURL=etichete.css.map */

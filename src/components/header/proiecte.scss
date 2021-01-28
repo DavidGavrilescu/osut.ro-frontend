@@ -1,0 +1,20 @@
+#proiecte_dropdown{
+    background:rgba(0,0,0,.1);
+    padding:15px 0px;
+    .proiect_submeniu{
+        padding:10px 0px;
+        transition:all .3s;
+        &:hover{
+            cursor:pointer;
+           // background:rgba(255,255,255,.05);
+           img{
+            opacity:1;
+           }
+        }
+        img{
+            width:100%;
+            transition:all .3s;
+            opacity:0.8;
+        }
+    }
+}

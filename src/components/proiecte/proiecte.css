@@ -1,0 +1,50 @@
+.Proiect {
+  padding: 30px 0px;
+  margin-bottom: 35px;
+}
+
+.Proiect a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.Proiect .container_proiect {
+  position: relative;
+  height: auto;
+  display: block;
+}
+
+.Proiect .container_proiect div {
+  margin-bottom: 10px;
+}
+
+.Proiect .container_proiect .overlay {
+  background: rgba(29, 34, 46, 0.7);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  padding: 35px 25px;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.Proiect .container_proiect .overlay:hover {
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  cursor: default;
+}
+
+.light_mode .Proiect h1 {
+  color: #fefefe;
+}
+
+.light_mode .Proiect p {
+  color: #ccc;
+}
+/*# sourceMappingURL=proiecte.css.map */

@@ -1,0 +1,65 @@
+.Doc {
+	&:hover {
+		background: rgba(170, 170, 170, 0.1);
+	}
+	a {
+		text-decoration: none;
+	}
+	.Document {
+		border: none;
+		margin: 0px 20px;
+		padding: 15px 0px;
+		border-radius: 0px;
+		border-bottom: 1px solid rgba(170, 170, 170, 0.1);
+		transition: all 0.1s;
+		min-height: 60px;
+		width: 90%;
+		a {
+			text-decoration: none;
+		}
+
+		&:hover {
+			cursor: pointer;
+			border-color: transparent;
+		}
+		h6 {
+			font-size: 15px;
+			line-height: 24px;
+			margin: 0px;
+			margin-top: 4px;
+			display: inline-block;
+			max-width: 100%;
+			margin-bottom: 6px;
+		}
+		.iconpdf {
+			width: 38px;
+			height: 38px;
+			margin-top: 6px;
+			float: left;
+			margin-right: 10px;
+			opacity: 0.8;
+		}
+		.smaller {
+			font-size: 11px;
+			height: 14px;
+			padding: 0px;
+			margin: 0px;
+			margin-top: 4px;
+			opacity: 0.8;
+
+			span {
+				line-height: 14px;
+				&.categorie {
+					text-transform: uppercase;
+					font-weight: 400;
+				}
+			}
+			line-height: 14px;
+		}
+	}
+}
+
+/// faq
+.MuiAccordion-rounded.Mui-expanded {
+	height: 100%;
+}

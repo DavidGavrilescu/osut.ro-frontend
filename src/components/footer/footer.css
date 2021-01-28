@@ -1,0 +1,104 @@
+footer#websiteFooter {
+  padding: 50px 0px;
+  margin: 0px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-top: 1px solid rgba(180, 180, 180, 0.1);
+  margin-top: 60px;
+}
+
+footer#websiteFooter button {
+  margin-right: 6px;
+  opacity: 0.8;
+}
+
+footer#websiteFooter button:hover {
+  opacity: 1;
+}
+
+footer#websiteFooter.whitebg {
+  border-radius: 0px;
+}
+
+footer#websiteFooter .footer_heading_meniu {
+  font-size: 90%;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+footer#websiteFooter a {
+  text-decoration: none;
+  text-align: left;
+}
+
+footer#websiteFooter a button {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0px;
+  margin-bottom: 3px;
+  -webkit-transition: border-color 0.1s;
+  transition: border-color 0.1s;
+}
+
+footer#websiteFooter a:hover {
+  text-decoration: none;
+}
+
+footer#websiteFooter a:hover button {
+  text-decoration: none;
+  border-color: inherit;
+}
+
+footer#websiteFooter #made {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.8;
+  padding-bottom: 35px;
+}
+
+footer#websiteFooter #made #inima {
+  color: #dd2020;
+  webkit-animation: inima;
+  -webkit-animation: inima;
+          animation: inima;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  display: inline-block;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  padding: 0px 4px;
+}
+
+@-webkit-keyframes inima {
+  0% {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+
+@keyframes inima {
+  0% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+/*# sourceMappingURL=footer.css.map */

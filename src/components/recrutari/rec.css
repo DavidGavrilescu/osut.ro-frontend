@@ -1,0 +1,23 @@
+#containerAnunturi {
+  margin-bottom: 40px;
+}
+
+#containerAnunturi .slide {
+  background: transparent;
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  min-height: 360px;
+}
+
+#containerAnunturi .slide * {
+  outline: none !important;
+  border: none !important;
+}
+
+#containerAnunturi #slid {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+/*# sourceMappingURL=rec.css.map */

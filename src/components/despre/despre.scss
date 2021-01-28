@@ -1,0 +1,469 @@
+#despre {
+	#fullheight {
+		background: url(https://wallpaperset.com/w/full/2/5/2/526132.jpg);
+		background-size: cover;
+		background-position: center;
+		height: 80vh;
+		width: 100%;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		padding-top: 5vh;
+	}
+	.proiect {
+		img.logoproiect {
+			margin-bottom: 20px;
+			height: 40px;
+		}
+		transition: border 0.3s;
+		cursor: default;
+		p {
+			min-height: 110px;
+			font-size: 1rem;
+			line-height: 1.8rem;
+		}
+		h5 {
+			height: 40px;
+			margin-bottom: 20px;
+		}
+	}
+	img.logo {
+		display: inline-block;
+		max-width: 180px;
+		margin: 30px 15px;
+		margin-left: 0px;
+	}
+	ul#proiecte_anterioare {
+		li {
+			margin-bottom: 5px;
+		}
+	}
+}
+#bg {
+	padding: 20px 0px;
+}
+* {
+	border: 0px solid transparent;
+}
+
+#submeniu_appbar {
+	a {
+		text-decoration: none;
+	}
+	.mobil {
+		a {
+			display: block;
+			text-align: center;
+		}
+	}
+}
+.card_presedinte {
+	border: 1px solid rgba(100, 100, 100, 0.15);
+	padding: 20px 10px;
+	transition: all 0.2s;
+
+	&:hover {
+		//filter: brightness(5);
+	}
+	.numeFamilie {
+		font-weight: bold;
+	}
+}
+.departament {
+	padding: 20px;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	img {
+		height: 80px;
+	}
+	ul {
+		list-style: none;
+		padding: 0px;
+		min-height: 125px;
+		li {
+			margin-bottom: 4px;
+		}
+	}
+	p {
+		max-width: 75ch;
+	}
+}
+.dark_mode {
+	.departament {
+		img {
+			filter: invert(0.95);
+		}
+	}
+}
+.proiect {
+	img.logoproiect {
+		height: 50px;
+	}
+}
+
+.membruEchipa {
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	.contact {
+		padding-bottom: 60px;
+		* {
+			display: none;
+		}
+	}
+	img {
+		transition: all 0.3s;
+	}
+	// &:hover{
+	//     img{
+	//         transform:rotate(8deg)
+	//     }
+
+	// }
+}
+img.membra {
+	height: 140px;
+}
+.whitebg.btn {
+	transition: all 0.4s;
+	&:hover {
+		background: rgba(0, 0, 0, 0.1);
+	}
+}
+
+#descEchipa {
+}
+#submeniu {
+	button {
+		margin-left: 10px;
+		font-size: 80%;
+		font-weight: 100;
+	}
+}
+.valori {
+	p {
+		min-height: 60px;
+	}
+}
+.dark_mode {
+	.valori {
+		img {
+			filter: invert(1);
+		}
+	}
+}
+.dark_mode {
+	#scurt-istoric {
+		.sectiune {
+			background: #1d222e;
+		}
+	}
+}
+.light_mode {
+	#scurt-istoric {
+		.sectiune {
+			background: #fff;
+		}
+	}
+}
+#scurt-istoric {
+	.sectiune {
+		position: sticky;
+		top: 50px;
+		padding: 40px 15px;
+		min-height: 30vh;
+		border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+		border-radius: 5px;
+		p {
+			max-width: 80ch;
+		}
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+// textul mare din pagina /despre
+#continut {
+	padding: 40px 20px;
+	border-radius: 4px;
+	position: relative;
+	margin-top: 15vh;
+	background: red;
+}
+
+.dark_mode {
+	#continut {
+		background: #2980b9;
+		background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
+		background: linear-gradient(to right, #2c3e50, #2980b9);
+		//background: rgba(255, 255, 255, 0.1);
+		background: transparent;
+		&:hover {
+			background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
+			background: linear-gradient(to right, #2c3e50, #2980b9);
+		}
+		* {
+			color: #fefafa;
+		}
+	}
+}
+.light_mode {
+	#continut {
+		background: #2980b9;
+		background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
+		background: linear-gradient(to right, #2c3e50, #2980b9);
+
+		* {
+			color: #fefafa;
+		}
+	}
+}
+#istoricSlider {
+	position: relative;
+	border-radius: 16px;
+
+	section {
+		width: 100%;
+		fill: red;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+
+	section .wave {
+		position: absolute;
+		width: 100%;
+		/*height from the svg file*/
+		height: 140px;
+		bottom: 0;
+		left: 0;
+		background: url("svg1.svg");
+		animation: waves 10s linear infinite;
+		z-index: 0;
+		border-radius: 16px;
+	}
+
+	section .wave:before {
+		content: "";
+		width: 100%;
+		height: 140px;
+		background: url("svg2.svg");
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		opacity: 0.4;
+		animation: waves-reverse 10s linear infinite;
+		border-radius: 16px;
+	}
+
+	section .wave:after {
+		content: "";
+		width: 100%;
+		height: 140px;
+		background: url("svg3.svg");
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.6;
+		z-index: -1;
+		animation-delay: -5s;
+		animation: waves 20s linear infinite;
+		border-radius: 16px;
+	}
+
+	@keyframes waves {
+		0% {
+			background-position: 0;
+		}
+		100% {
+			/* from width of the svg file */
+			background-position: 1600px;
+		}
+	}
+
+	@keyframes waves-reverse {
+		0% {
+			background-position: 1600px;
+		}
+		100% {
+			background-position: 0;
+		}
+	}
+
+	.slide {
+		width: 100%;
+		background: #fff;
+		padding: 20px;
+		overflow: hidden;
+		position: relative;
+		min-height: 490px;
+		z-index: 12312;
+		border-radius: 16px;
+
+		* {
+			outline: none !important;
+		}
+		#text {
+			font-weight: 800;
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			left: 50%;
+			top: 38%;
+			transform: translate(-50%, -50%);
+			h6 {
+				max-width: 45ch;
+				margin: 0px auto;
+				opacity: 0.9;
+				padding: 10px;
+				font-size: 2.5rem;
+				z-index: 12312321;
+			}
+		}
+		h4 {
+			font-weight: 800;
+			font-size: 10rem;
+			position: absolute;
+			left: 50%;
+			top: 40%;
+			transform: translate(-50%, -50%);
+			color: rgba(223, 47, 47, 0.5);
+		}
+		img {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			display: none;
+		}
+	}
+}
+.dark_mode #istoricSlider .slide {
+	background: rgba(0, 0, 0, 0.2);
+	h4 {
+		color: rgba(223, 47, 47, 0.5);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#istoricSlider .slide #text h6 {
+		font-size: 20px;
+	}
+	#istoricSlider .slide h4 {
+		font-size: 120px;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	#istoricSlider .slide #text h6 {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#istoricSlider .slide #text h6 {
+		font-size: 26px;
+	}
+	#istoricSlider button {
+		.slick-arrow.slick-next {
+			display: none !important;
+		}
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	#istoricSlider .slide #text h6 {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	#istoricSlider .slide #text h6 {
+		font-size: 33px;
+		text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+	}
+}
+
+#osutNumere {
+	padding: 50px 0px;
+	position: relative;
+	#nr {
+		position: absolute;
+
+		left: 0px;
+		bottom: 0px;
+		width: 100%;
+		margin-top: 10vh;
+	}
+	section {
+		width: 100%;
+
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+
+	section .wave {
+		position: absolute;
+		width: 100%;
+		/*height from the svg file*/
+		height: 140px;
+		bottom: 0;
+		left: 0;
+		background: url("svg1.svg");
+		animation: waves 10s linear infinite;
+		z-index: 0;
+		border-radius: 16px;
+	}
+
+	section .wave:before {
+		content: "";
+		width: 100%;
+		height: 140px;
+		background: url("svg2.svg");
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		opacity: 0.4;
+		animation: waves-reverse 10s linear infinite;
+		border-radius: 16px;
+	}
+
+	section .wave:after {
+		content: "";
+		width: 100%;
+		height: 140px;
+		background: url("svg3.svg");
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.6;
+		z-index: -1;
+		animation-delay: -5s;
+		animation: waves 20s linear infinite;
+		border-radius: 16px;
+	}
+
+	@keyframes waves {
+		0% {
+			background-position: 0;
+		}
+		100% {
+			/* from width of the svg file */
+			background-position: 1600px;
+		}
+	}
+
+	@keyframes waves-reverse {
+		0% {
+			background-position: 1600px;
+		}
+		100% {
+			background-position: 0;
+		}
+	}
+}
+// * {
+// 	background: url(http://localhost:3001/echipa/breha2.jpg) !important;
+// }

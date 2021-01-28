@@ -1,0 +1,32 @@
+.faqIntrebare div {
+  font-weight: 800;
+}
+
+.faqIntrebare p {
+  font-weight: 200;
+}
+
+.faqIntrebare p a {
+  color: #d02121 !important;
+  margin-top: 4px;
+  text-decoration: none;
+}
+
+.faqIntrebare p a:hover {
+  text-decoration: underline;
+}
+
+.faqIntrebare p * {
+  font-weight: 200;
+}
+
+.faqIntrebare p * a {
+  color: #d02121 !important;
+  margin-top: 4px;
+  text-decoration: none;
+}
+
+.faqIntrebare p * a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=faq.css.map */

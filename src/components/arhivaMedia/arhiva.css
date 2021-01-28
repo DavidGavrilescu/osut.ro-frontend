@@ -1,0 +1,27 @@
+#arhiva_media {
+  margin-top: 0px;
+}
+
+#arhiva_media .link_media {
+  margin-bottom: 45px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border-bottom: 1px solid rgba(160, 160, 160, 0.25) !important;
+  padding-bottom: 5px;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+#arhiva_media .link_media:hover {
+  border-bottom: 1px solid #db2e2e !important;
+  opacity: 1;
+}
+
+#arhiva_media .link_media a {
+  text-decoration: none;
+}
+
+#arhiva_media .link_media a:hover {
+  text-decoration: none;
+}
+/*# sourceMappingURL=arhiva.css.map */

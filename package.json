@@ -1,0 +1,58 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "proxi": "http://127.0.0.1:80",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@material-ui/pickers": "^3.2.10",
+    "@steveeeie/react-page-transition": "^1.2.0",
+    "axios": "^0.19.2",
+    "gsap": "^3.5.1",
+    "intl-relativeformat": "^6.4.3",
+    "material-ui-image": "^3.2.3",
+    "material-ui-toggle-icon": "^1.0.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-axios": "^2.0.3",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-intl": "^5.10.9",
+    "react-messenger-plugin": "^2.1.0",
+    "react-motion": "^0.5.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-page-transition": "^3.1.0",
+    "react-router-transition": "^2.0.0",
+    "react-scripts": "^4.0.0",
+    "react-slick": "^0.27.13",
+    "react-transition-group": "^4.4.1",
+    "styled-components": "^5.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "prettier": "2.1.2"
+  }
+}

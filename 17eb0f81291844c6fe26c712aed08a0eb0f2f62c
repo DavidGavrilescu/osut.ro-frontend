@@ -1,0 +1,22 @@
+[33mfb524fa[m[33m ([m[1;36mHEAD -> [m[1;32mcleanup[m[33m)[m HEAD@{0}: checkout: moving from 17eb0f81291844c6fe26c712aed08a0eb0f2f62c to cleanup
+[33m17eb0f8[m HEAD@{1}: commit: cleanup, animations, menu, fixed max with for everything
+[33m7d07de1[m HEAD@{2}: commit: curatare cod
+[33me6c6c3f[m[33m ([m[1;31morigin/cleanup[m[33m)[m HEAD@{3}: pull origin cleanup: Fast-forward
+[33mfb524fa[m[33m ([m[1;36mHEAD -> [m[1;32mcleanup[m[33m)[m HEAD@{4}: checkout: moving from master to cleanup
+[33m1cf51d7[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{5}: commit (merge): curatare cod
+[33m6d6b6fe[m HEAD@{6}: commit: curatare cod
+[33m9a292a5[m HEAD@{7}: commit: curatare cod
+[33m985d393[m HEAD@{8}: commit (merge): curatare cod
+[33mfb524fa[m[33m ([m[1;36mHEAD -> [m[1;32mcleanup[m[33m)[m HEAD@{9}: merge cleanup: Fast-forward
+[33mde5a6a0[m HEAD@{10}: checkout: moving from cleanup to master
+[33mfb524fa[m[33m ([m[1;36mHEAD -> [m[1;32mcleanup[m[33m)[m HEAD@{11}: commit: curatare cod
+[33m87ab51b[m HEAD@{12}: commit: readme.md in romana
+[33m41ac46a[m HEAD@{13}: commit: readme.md in romana
+[33mb305f2e[m HEAD@{14}: commit: readme.md in romana
+[33mb32aba7[m HEAD@{15}: commit: readme.md in romana
+[33mf8ca782[m HEAD@{16}: commit: starting to clean up code
+[33mde5a6a0[m HEAD@{17}: checkout: moving from master to cleanup
+[33mde5a6a0[m HEAD@{18}: Branch: renamed refs/heads/master to refs/heads/master
+[33mde5a6a0[m HEAD@{20}: commit: first commit
+[33m6c8d53d[m HEAD@{21}: commit: First commit
+[33m3944fa5[m HEAD@{22}: commit (initial): Initialize project using Create React App

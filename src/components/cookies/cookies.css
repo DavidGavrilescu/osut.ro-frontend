@@ -1,0 +1,106 @@
+.cookie-message {
+  border-radius: 10px;
+  padding: 15px 0;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+  line-height: 40px;
+  border-top: 1px solid #e4e4e4;
+  position: fixed;
+  z-index: 1111100;
+  bottom: 4%;
+  right: 2%;
+  margin: auto;
+  width: 96%;
+  max-width: 400px;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  color: #333;
+  -webkit-animation: cookie 0.15s;
+          animation: cookie 0.15s;
+  -webkit-animation-timing-function: cubic-bezier(0.15, 0.68, 0.98, 0.64);
+          animation-timing-function: cubic-bezier(0.15, 0.68, 0.98, 0.64);
+}
+
+@-webkit-keyframes cookie {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes cookie {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.cookie-message img {
+  height: 50px;
+  width: 50px;
+  margin: 0 15px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.cookie-message span.text {
+  display: inline-block;
+  line-height: 1.5;
+  padding-right: 16px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cookie-message span.text a {
+  color: #d02121;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.cookie-message span.text a:hover {
+  text-decoration: none;
+  border-color: #d02121;
+}
+
+.cookie-message div.close {
+  -ms-flex: 1 1 auto;
+  -webkit-box-flex: 1;
+          flex: 1 1 auto;
+  border: none;
+  position: relative;
+  padding: 15px 0px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  height: 100%;
+}
+
+#politicaCookies a {
+  color: #d02121;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+#politicaCookies a:hover {
+  text-decoration: none;
+  border-color: #d02121;
+}
+/*# sourceMappingURL=cookies.css.map */

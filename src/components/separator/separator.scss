@@ -1,0 +1,26 @@
+#sep{
+    margin:60px auto;
+    margin-bottom:20px;
+    margin-left:2px;
+    .sep{
+        transform:scale(1.2);
+        height:6px;
+        border-radius:30px;
+        display:inline-block;
+        margin-right:5px;
+        &.sep1{
+            width:20px;
+            background:#dd2020; // rosul osut?
+            margin-right:6px;
+        }
+        &.sep2{
+            width:10px;
+            background:rgba(150,150,250,.2);
+            
+        }
+        &.sep3{
+            width:6px;
+            background:rgba(150,150,250,.2);
+        }
+    }
+}

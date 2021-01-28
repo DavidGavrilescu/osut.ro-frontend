@@ -1,0 +1,26 @@
+#proiecte_dropdown {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px 0px;
+}
+
+#proiecte_dropdown .proiect_submeniu {
+  padding: 10px 0px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#proiecte_dropdown .proiect_submeniu:hover {
+  cursor: pointer;
+}
+
+#proiecte_dropdown .proiect_submeniu:hover img {
+  opacity: 1;
+}
+
+#proiecte_dropdown .proiect_submeniu img {
+  width: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  opacity: 0.8;
+}
+/*# sourceMappingURL=proiecte.css.map */

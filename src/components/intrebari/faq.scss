@@ -1,0 +1,28 @@
+.faqIntrebare {
+	div {
+		font-weight: 800;
+	}
+	p {
+		font-weight: 200;
+
+		a {
+			color: rgb(208, 33, 33) !important;
+			margin-top: 4px;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		* {
+			font-weight: 200;
+			a {
+				color: rgb(208, 33, 33) !important;
+				margin-top: 4px;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

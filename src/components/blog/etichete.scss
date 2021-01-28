@@ -1,0 +1,30 @@
+span.tag {
+	background: rgba(140, 140, 140, 0.1);
+	display: inline-block;
+	padding: 5px 8px;
+	border-radius: 2px;
+	transition: all 0.3s;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin-bottom: 10px;
+	margin-right: 10px;
+	&:hover {
+		background: rgba(160, 160, 160, 0.2);
+		cursor: pointer;
+	}
+}
+span.tag_mic {
+	display: inline-block;
+	padding: 3px 3px;
+	border-radius: 2px;
+	transition: all 0.3s;
+	font-size: 12px;
+	opacity: 0.6;
+	margin-right: 4px;
+	&::before {
+		content: "#";
+	}
+	&:hover {
+		cursor: pointer;
+		opacity: 1;
+	}
+}
