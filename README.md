@@ -1,5 +1,4 @@
 Aceasta este aplicatia frontend folosita de https://osut.ro<br />
-Daca doriti sa contribuiti puteti deschide un *issue* sau *pull request*.
 </hr>
 
 
