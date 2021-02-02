@@ -55,23 +55,23 @@ const MembruEchipa = ({ nume_poza, nume, email, telefon, rank }) => {
 };
 
 const BCE = [
-	{
-		nume: "Adrian-Alexandru BREHA",
-		functie: "Președinte OSUT",
-		telefon: "0748322663",
-		mail: "adrian@osut.ro",
-		poza: "breha",
-	},
+	// {
+	// 	nume: "Adrian-Alexandru BREHA",
+	// 	functie: "Președinte OSUT",
+	// 	telefon: "0748322663",
+	// 	mail: "adrian@osut.ro",
+	// 	poza: "breha",
+	// },
 	{
 		nume: "Patricia VĂLEANU",
-		functie: "Vicepreşedinte",
+		functie: "Vicepreședinte organizare internă și proiecte",
 		telefon: "0769 616 250",
 		mail: "patricia.valeanu@osut.ro",
 		poza: "p2",
 	},
 	{
 		nume: "Andreea-Raluca ARGEȘEANU",
-		functie: "Vicepreşedinte",
+		functie: "Vicepreședinte reprezentare",
 		telefon: "0746 036 096",
 		mail: "andreea.argeseanu@osut.ro",
 		poza: "andreea",
@@ -91,18 +91,18 @@ const BCE = [
 		poza: "darius_teperdel",
 	},
 	{
-		nume: "Diana ALEXAN",
+		nume: "Marcus MAN",
 		functie: "Coordonator Social-Educaţional-Cercetare (S.E.C.)",
 		telefon: "",
 		mail: "",
-		poza: "diana",
+		poza: "Marcus",
 	},
 	{
-		nume: "Cătălin-Andrei CHIRIȚĂ",
+		nume: "Emilian-Andrei BOGDAN",
 		functie: "Coordonator IT și Logistică (IT&L)",
-		telefon: "0767 912 149",
-		mail: "catalin@osut.ro",
-		poza: "catalin",
+		telefon: "0752 947 703",
+		mail: "emilian@osut.ro",
+		poza: "Emilian",
 	},
 	{
 		nume: "Nelea ANGHELEANU",
@@ -118,13 +118,13 @@ const BCE = [
 		mail: "hari@osut.ro",
 		poza: "hari",
 	},
-	// {
-	// 	nume: "Cristina ȘERE",
-	// 	functie: "Coordonator Relații Publice (PR)",
-	// 	telefon: "0756 775 685",
-	// 	mail: "cristina@osut.ro",
-	// 	poza: "cristina_sere",
-	// },
+	{
+		nume: "Roxana MATEI",
+		functie: "Coordonator Relații Publice (PR)",
+		telefon: "0756 775 685",
+		mail: "cristina@osut.ro",
+		poza: "Roxana",
+	},
 
 	{
 		nume: "Ionela-Luiza MARINESCU",
