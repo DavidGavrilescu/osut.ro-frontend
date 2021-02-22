@@ -45,8 +45,8 @@ export default function FooterWebsite({ dark }) {
 	const Proiecte = [
 		["Abecedarul Carierei", "https://abc.osut.ro"],
 		// ["Democrația în UVT", "#"],
-		["ITFest", "https://itfest.osut.ro"],
-		["Studentfest", "https://studentfest.ro"],
+		["ITFest Timișoara", "https://itfest.osut.ro"],
+		["StudentFest", "https://studentfest.ro"],
 		["West Summer University", "https://wsu.osut.ro"],
 	];
 	const AlteLinkuri = [

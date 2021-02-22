@@ -31,7 +31,7 @@ const Contact = ({ darkmode }) => {
 				<meta name="description" content="Datele de contact ale Organizației Studenților din Universitatea de Vest din Timișoara și ale studenților reprezentanți." />
 			</Helmet>
 		<Container maxWidth="lg">
-			<Grid container spacing={3}>
+			<Grid container spacing={2}>
 				<Grid item xs={12} md={4}>
 					<div id="contact" className="whitebg">
 						<Typography color="textPrimary" variant="h4" gutterBottom>
@@ -61,7 +61,7 @@ const Contact = ({ darkmode }) => {
 							Persoane de contact
 						</Typography>
 						<Grid container spacing={0}>
-							<Grid item xs={12} md={4} style={{ marginTop: 20 }}>
+							{/* <Grid item xs={12} md={4} style={{ marginTop: 20 }}>
 								<Typography
 									color="textPrimary"
 									variant="h5"
@@ -84,7 +84,7 @@ const Contact = ({ darkmode }) => {
 										text="adrian@osut.ro"
 									/>
 								</Typography>
-							</Grid>
+							</Grid> */}
 							<Grid item xs={12} md={4} style={{ marginTop: 20 }}>
 								<Typography
 									color="textPrimary"

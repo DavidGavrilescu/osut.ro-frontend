@@ -64,25 +64,25 @@ const BCE = [
 	// },
 	{
 		nume: "Patricia VĂLEANU",
-		functie: "Vicepreședinte organizare internă și proiecte",
+		functie: "Vicepreședinte responsabil cu organizarea internă și cu proiectele OSUT",
 		telefon: "0769 616 250",
 		mail: "patricia.valeanu@osut.ro",
 		poza: "p2",
 	},
 	{
 		nume: "Andreea-Raluca ARGEȘEANU",
-		functie: "Vicepreședinte reprezentare",
+		functie: "Vicepreședinte responsabil cu activitatea de reprezentare studențească",
 		telefon: "0746 036 096",
 		mail: "andreea.argeseanu@osut.ro",
 		poza: "andreea",
 	},
-	{
-		nume: "Diana-Loredana IUGA",
-		functie: "Secretar General",
-		telefon: "0743 914 800",
-		mail: "diana@osut.ro",
-		poza: "diana_mare",
-	},
+	// {
+	// 	nume: "Diana-Loredana IUGA",
+	// 	functie: "Secretar General",
+	// 	telefon: "0743 914 800",
+	// 	mail: "diana@osut.ro",
+	// 	poza: "diana_mare",
+	// },
 	{
 		nume: "Darius-Dragoș ȚEPERDEL",
 		functie: "Coordonator Resurse Umane (HR)",
@@ -91,7 +91,7 @@ const BCE = [
 		poza: "darius_teperdel",
 	},
 	{
-		nume: "Marcus MAN",
+		nume: "Marcus-Radu MAN",
 		functie: "Coordonator Social-Educaţional-Cercetare (S.E.C.)",
 		telefon: "",
 		mail: "",
@@ -182,7 +182,7 @@ const Echipa = () => {
 									nume={item.nume}
 									rank={item.functie}
 									telefon={item.telefon}
-									mail={item.mail}
+									email={item.mail}
 								/>
 							</>
 						))}
