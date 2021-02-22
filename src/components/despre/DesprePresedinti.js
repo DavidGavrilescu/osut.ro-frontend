@@ -204,7 +204,7 @@ const presedinti = [
 		nume: "Adrian-Alexandru",
 		nume2: "Breha",
 		inceput: "Iunie 2020",
-		final: "Prezent",
+		final: "Ianuarie 2021",
 	},
 ].reverse();
 

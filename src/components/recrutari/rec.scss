@@ -6,18 +6,26 @@
 		padding: 20px;
 		overflow: hidden;
 		position: relative;
-		min-height: 360px;
-		*,
-		+ *,
-		> *,
-		<* {
-			outline: none !important;
-			border: none !important;
-		}
+		// min-height: 360px;
+		// *,
+		// + *,
+		// > *,
+		// <* {
+		// 	outline: none !important;
+		// 	border: none !important;
+		// }
 	}
 	#slid {
-		background: rgba(0, 0, 0, 0.1);
+		background:rgba(255, 255, 255, 0.04);
 
 		border-radius: 15px;
+	}
+}
+
+.isLight {
+	#containerAnunturi {
+		#slid{
+			background: white;
+		}
 	}
 }

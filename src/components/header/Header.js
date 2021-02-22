@@ -195,7 +195,7 @@ const Header = ({ mode, changeMode, fixed = true }) => {
 	return (
 		<>
 			<div id="main_nav" style={{ overflowY: "hidden" }}>
-				<div class="snowflakes" aria-hidden="true">
+				{/* <div class="snowflakes" aria-hidden="true">
 					<div class="snowflake">❅</div>
 					<div class="snowflake">❅</div>
 					<div class="snowflake">❆</div>
@@ -206,7 +206,7 @@ const Header = ({ mode, changeMode, fixed = true }) => {
 					<div class="snowflake">❅</div>
 					<div class="snowflake">❆</div>
 					<div class="snowflake">❄</div>
-				</div>
+				</div> */}
 				<AppBar
 					id="mainAppBar"
 					position={fixed ? "fixed" : "sticky"}

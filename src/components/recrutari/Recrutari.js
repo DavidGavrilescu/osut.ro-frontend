@@ -5,6 +5,8 @@ import Container from "@material-ui/core/Container";
 import "./rec.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+
 const Slide = ({ titlu, text, b1 = "", b2 = "", textB1 = "" }) => {
 	return (
 		<>
@@ -21,28 +23,29 @@ const Slide = ({ titlu, text, b1 = "", b2 = "", textB1 = "" }) => {
 					{text}
 				</Typography>
 				<br />
+				{/* {b2 !== "" && (
+					<a href={b2} style={{textDecoration:'none'}} target="_blank">
+						<Button
+							variant="outlined"
+							color="default"
+							size="large"
+							style={{marginBottom: 16}}
+							>
+							Află mai multe
+						</Button>
+					</a>
+				)} */}
 				{b1 !== "" && textB1 && (
-					<Link to={b1}>
+					<a href={b1} style={{textDecoration:'none'}} target="_blank">
 						<Button
-							variant="outlined"
+							variant="contained"
 							color="primary"
-							style={{ color: "#eee", borderColor: "#fff" }}
+							style={{borderColor: "#fff",marginBottom: 16}}
 							size="large">
-							Afla mai multe
+							{textB1}
+							<ArrowRightAltIcon />
 						</Button>
-					</Link>
-				)}
-				&nbsp; &nbsp;
-				{b2 !== "" && (
-					<Link to={b2}>
-						<Button
-							variant="outlined"
-							color="primary"
-							style={{ color: "#eee", borderColor: "#fff" }}
-							size="large">
-							Afla mai multe
-						</Button>
-					</Link>
+						</a>
 				)}
 			</div>
 		</>
@@ -65,15 +68,13 @@ export default function Recrutari() {
 					<div style={{ outline: "none" }}>
 						<Slide
 							titlu="OSUT RECRUTEAZă"
-							text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+							text="Dacă ai visat la locul ideal care să îți contureze studenția, află că OSUT recrutează și e gata să îți ofere cea mai frumoasă experiență. Completează formularul de înscriere și pregătește-te să descoperi organizația care leagă prietenii, te dezvoltă personal, îți creează oportunități și cel mai important, luptă pentru studenți."
+						b1='http://bit.ly/formular-recrutari-OSUT'
+						textB1='Formular înscriere'
+						b2='Pisici'
 						/>
 					</div>
-					<div>
-						<Slide
-							titlu="1991"
-							text="OSUT are iniţiativa introducerii burselor sociale în Universitatea de Vest din Timişoara şi facilitează accesul studenţilor la tabere cu preţ redus. "
-						/>
-					</div>
+					
 				</Slider>
 			</div>
 		</Container>

@@ -314,7 +314,7 @@ export default function Singlet({ post_id }) {
 													borderBottom: "1px solid rgba(180,180,190,.2)",
 													padding: "20px",
 												}}>
-												Din aceeasi categorie
+												Din aceeași categorie
 											</Typography>
 										)}
 
