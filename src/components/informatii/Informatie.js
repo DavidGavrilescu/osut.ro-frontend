@@ -123,6 +123,10 @@ const Informatie = () => {
 												}}>
 												{info.intrebare}
 											</Typography>
+											<Helmet>
+												<title>{`${info.intrebare} - Info studenți - OSUT`}</title>
+												<meta name="description" content={info.raspuns} />
+											</Helmet>
 											<Typography
 												color="textSecondary"
 												variant="body1"
