@@ -59,7 +59,7 @@ const Informatie = () => {
 						<>
 							<Grid item xs={12}>
 								<Breadcrumbs aria-label="breadcrumb">
-									<Link color="inherit" to="/informatii-studenti">
+									<Link color="inherit" to="/info-studenti">
 										<Typography
 											color="textSecondary"
 											variant="body1"
@@ -67,9 +67,7 @@ const Informatie = () => {
 											Informații studenți
 										</Typography>
 									</Link>
-									<Link
-										color="inherit"
-										to={"/informatii-studenti/" + categorie}>
+									<Link color="inherit" to={"/info-studenti/" + categorie}>
 										<Typography
 											color="textSecondary"
 											variant="body1"
@@ -87,7 +85,7 @@ const Informatie = () => {
 												<>
 													<Link
 														key={item.id}
-														to={"/informatii-studenti/" + item.link}
+														to={"/info-studenti/" + item.link}
 														style={{ color: "inherit" }}>
 														<Typography
 															color="textPrimary"

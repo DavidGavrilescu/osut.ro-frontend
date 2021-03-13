@@ -54,7 +54,7 @@ function SimpleBottomNavigation() {
 				<BottomNavigationAction
 					label="Informații"
 					component={Link}
-					to="/informatii-studenti"
+					to="/info-studenti"
 				/>
 				<BottomNavigationAction component={Link} to="/blog" label="Articole" />
 
@@ -133,7 +133,7 @@ const MeniuMobil = ({ inchide }) => {
 					<NavLink
 						activeClassName="selected"
 						color="default"
-						to="/informatii-studenti"
+						to="/info-studenti"
 						onClick={() => inchide()}
 						className={classes.link}>
 						<Typography variant="h2" color="default">
@@ -249,7 +249,7 @@ const Header = ({ mode, changeMode, fixed = true }) => {
 								</NavLink>
 								<NavLink
 									activeClassName="selected"
-									to="/informatii-studenti"
+									to="/info-studenti"
 									className={classes.link}>
 									<Button className={classes.linkbutton} color="default">
 										Info studenți
