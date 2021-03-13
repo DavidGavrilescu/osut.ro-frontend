@@ -217,6 +217,21 @@ const App = () => {
 										component={Informatie}
 										exact
 									/>
+									<Route
+										path="/info-studenti"
+										component={Informatii}
+										exact
+									/>
+									<Route
+										path="/info-studenti/:categorie"
+										component={IntrebariInformatii}
+										exact
+									/>
+									<Route
+										path="/info-studenti/:categorie/:informatie"
+										component={Informatie}
+										exact
+									/>
 
 									<Route
 										path="/parteneri"
