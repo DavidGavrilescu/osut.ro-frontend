@@ -138,12 +138,16 @@ const Informatie = () => {
 										</>
 									)}
 									<div
-										style={{
-											margin: "30px 0px",
-											marginBottom: 0,
-											padding: "20px 0px",
-											borderTop: "1px solid rgba(160,160,160,.1)",
-										}}>
+										style={
+											docs.length > 0
+												? {
+														margin: "30px 0px",
+														marginBottom: 0,
+														padding: "20px 0px",
+														borderTop: "1px solid rgba(160,160,160,.1)",
+												  }
+												: {}
+										}>
 										{Array.isArray(docs) && docs.length > 0 && (
 											<Typography
 												color="textPrimary"
