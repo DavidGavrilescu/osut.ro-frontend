@@ -67,10 +67,11 @@ export default function Recrutari() {
 				<Slider {...settings}>
 					<div style={{ outline: "none" }}>
 						<Slide
-							titlu="OSUT RECRUTEAZă"
-							text="Dacă ai visat la locul ideal care să îți contureze studenția, află că OSUT recrutează și e gata să îți ofere cea mai frumoasă experiență. Completează formularul de înscriere și pregătește-te să descoperi organizația care leagă prietenii, te dezvoltă personal, îți creează oportunități și cel mai important, luptă pentru studenți."
-						b1='http://bit.ly/formular-recrutari-OSUT'
-						textB1='Formular înscriere'
+							titlu="OSUT te invită să te alături mișcării studențești, investind în viitor!"
+							text="Ești actualmente angajat și îți dorești să alegi unde investești 3,5% din impozitul pe venit? 
+							Ei bine, îți povestim noi!​"
+						b1='https://osut.ro/p/redirectioneaza-3-5-din-impozitul-pe-venit-catre-osut-'
+						textB1='Mai multe detalii'
 						b2='Pisici'
 						/>
 					</div>

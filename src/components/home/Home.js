@@ -25,7 +25,7 @@ const Home = () => {
 
 	return (
 		<>
-			<Recrutari />
+			{/* <Recrutari /> */}
 			<Container maxWidth="lg">
 				{items.length > 0 ? <Blog items={items} categorii={categ} /> : ""}
 				{/* <Separator /> */}
