@@ -58,8 +58,8 @@ const ContacteazaNe = () => (
 const Informatie = ({ titlu, descriere, link }) => {
 	return (
 		<>
-			<Grid item xs={12} md={4} style={{ marginBottom: 30 }}>
-				<Link to={"/informatii-studenti/" + link}>
+			<Grid item xs={12} md={6} lg={4} style={{ marginBottom: 30 }}>
+				<Link to={"/info-studenti/" + link}>
 					<div className="sectiune whitebg" role="button">
 						<Typography
 							color="textPrimary"
@@ -87,7 +87,6 @@ const Informatii = () => {
 	});
 	return (
 		<>
-			
 			<Container maxWidth="lg" id="centru_ajutor" style={{ marginTop: "30px" }}>
 				<Grid container spacing={4} direction="row" alignItems="flex-start">
 					{info.length !== 0 ? (
@@ -115,7 +114,10 @@ const Informatii = () => {
 			<ContacteazaNe />
 			<Helmet>
 				<title>{`OSUT - Info studenți`}</title>
-				<meta name="description" content="Diverse informații privind parcursul academic al unui student la Universitatea de Vest din Timișoara (UVT)." />
+				<meta
+					name="description"
+					content="Diverse informații privind parcursul academic al unui student la Universitatea de Vest din Timișoara (UVT)."
+				/>
 			</Helmet>
 		</>
 	);

@@ -11,12 +11,17 @@
 		.sectiune {
 			min-height: 235px;
 			padding: 30px 20px;
-			border-radius: 3px;
+			border-radius: 10px;
 			transition: transform 0.2s;
 			&:hover {
 				transform: translateY(7px);
 				cursor: pointer;
 			}
+			// h6{
+			// 	background:linear-gradient(135deg, #CF2121 0%,#fff 20%);
+			// 	-webkit-background-clip: text;
+			// 	-webkit-text-fill-color: transparent;
+			// }
 		}
 		&.informatieLink {
 			div {
