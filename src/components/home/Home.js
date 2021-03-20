@@ -25,6 +25,7 @@ const Home = () => {
 
 	return (
 		<>
+			<h1>test deploy????</h1>
 			{/* <Recrutari /> */}
 			<Container maxWidth="lg">
 				{items.length > 0 ? <Blog items={items} categorii={categ} /> : ""}
