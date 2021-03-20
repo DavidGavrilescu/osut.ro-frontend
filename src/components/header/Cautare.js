@@ -62,8 +62,135 @@ const useStyles = makeStyles((theme) => ({
 
 const Cautare = ({ dark, inchide }) => {
 	const [input, setInput] = useState("");
+	const animals = [
+		"🐭",
+		"🐹",
+		"🐰",
+		"🐶",
+		"🐺",
+		"🦊",
+		"🐯",
+		"🦁",
+		"🦒",
+		"🦓",
+		"🐴",
+		"🐮",
+		"🐷",
+		"🐽",
+		"🐻",
+		"🐼",
+		"🐸",
+		"🐲",
+		"🦄",
+		"🐵",
+		"🙈",
+		"🙉",
+		"🙊",
+		"🐱",
+		"🐾",
+		"😸",
+		"😹",
+		"😺",
+		"😼",
+		"😻",
+		"😽",
+		"😾",
+		"😿",
+		"🙀",
+		"🐅",
+		"🐆",
+		"🐘",
+		"🦏",
+		"🦛",
+		"🐃",
+		"🐂",
+		"🐄",
+		"🐒",
+		"🦍",
+		"🦧",
+		"🦥",
+		"🦘",
+		"🐨",
+		"🦌",
+		"🐐",
+		"🐏",
+		"🐑",
+		"🐎",
+		"🦙",
+		"🐪",
+		"🐫",
+		"🐗",
+		"🐖",
+		"🐉",
+		"🦖",
+		"🦕",
+		"🐈",
+		"🐕",
+		"🐩",
+		"🐇",
+		"🦨",
+		"🦝",
+		"🦡",
+		"🦔",
+		"🦦",
+		"🐀",
+		"🐁",
+		"🦇",
+		"🐍",
+		"👣",
+		"🐦",
+		"🦅",
+		"🦉",
+		"🦜",
+		"🦩",
+		"🐧",
+		"🦚",
+		"🦃",
+		"🦢",
+		"🦆",
+		"🐓",
+		"🐔",
+		"🐣",
+		"🐤",
+		"🐥",
+		"🐋",
+		"🐳",
+		"🐬",
+		"🦈",
+		"🐟",
+		"🐠",
+		"🐡",
+		"🐙",
+		"🦑",
+		"🦐",
+		"🦀",
+		"🐚",
+		"🐌",
+		"🦞",
+		"🦪",
+		"🐢",
+		"🦎",
+		"🐊",
+		"🏇",
+		"🎠",
+		"🐀",
+		"🐃",
+		"🐅",
+		"🐇",
+		"🐉",
+		"🐍",
+		"🐎",
+		"🐐",
+		"🐒",
+		"🐓",
+		"🐕",
+		"🐖",
+	];
+	const randAnimal = () => animals[Math.floor(Math.random() * animals.length)];
+
 	const [rezultate, setRezultate] = useState([]);
 	const [rezultateIS, setRezultateIS] = useState([]);
+	const [cats, setCats] = useState(randAnimal());
 
 	const classes = useStyles();
 	let bgSearch = dark ? "#262B36" : "#fefefe";
@@ -150,13 +277,15 @@ const Cautare = ({ dark, inchide }) => {
 							direction="row"
 							alignItems="stretch"
 							alignContent="stretch">
-							{rezultate.length !== [] &&
-								input == "aici stau lucrurile in care cred" && (
-									<img
-										src="https://scontent.ftsr1-1.fna.fbcdn.net/v/t1.0-9/84246007_2902306279836806_3700865309125640192_n.jpg?_nc_cat=106&ccb=2&_nc_sid=e3f864&_nc_ohc=KAhfzrsAYB8AX9ikR2M&_nc_ht=scontent.ftsr1-1.fna&oh=534f2fec7195519ea4f8d31a432f6d04&oe=600B94A6"
-										style={{ width: "100%" }}
-									/>
-								)}
+							{rezultate.length !== [] && input.toLowerCase() == "meow" && (
+								<h1
+									style={{ userSelect: "none" }}
+									onClick={() => {
+										setCats(cats + "" + randAnimal());
+									}}>
+									{cats}
+								</h1>
+							)}
 							{rezultate.length !== [] && rezultate.length > 0 && input !== "" && (
 								<Typography
 									color="primary"

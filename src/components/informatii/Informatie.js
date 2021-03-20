@@ -9,7 +9,7 @@ import {
 	incarcaInformatiiStudenti,
 	incarcaRaspunsIntrebareIS,
 } from "../reuse/API";
-import Hidden from "@material-ui/core/hidden";
+import { Hidden } from "@material-ui/core";
 import Helmet from "react-helmet";
 import Loader from "../Loader/Loader";
 import "./informatii.css";
