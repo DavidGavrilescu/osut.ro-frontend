@@ -10,7 +10,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import osut from "../../img/osut-alb-meniu.png";
 import osutDark from "../../img/osut-negru-meniu.png";
 import SearchIcon from "@material-ui/icons/Search";
-import Hidden from "@material-ui/core/Hidden";
+import { Hidden } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import Cautare from "./Cautare";
 import Paper from "@material-ui/core/Paper";
@@ -18,7 +18,7 @@ import "./header.css";
 import NewReleasesIcon from "@material-ui/icons/NewReleases";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-
+///
 function SimpleBottomNavigation() {
 	const [value, setValue] = React.useState(0);
 
