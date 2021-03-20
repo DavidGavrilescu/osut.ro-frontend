@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Container from "@material-ui/core/Container";
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import "./arhiva.css";
 import Separator from "../separator/Separator";
 import LinkMedia from "./LinkMedia";
@@ -11,7 +11,6 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Helmet from "react-helmet";
-
 
 let arhiva = [
 	{
@@ -1335,7 +1334,6 @@ let arhiva = [
 	},
 ];
 
-
 function url_domain(data) {
 	var a = document.createElement("a");
 	a.href = data;
@@ -1346,102 +1344,106 @@ const ArhivaMedia = () => {
 	const handleChangeAn = (event, value) => {
 		setAn(event.target.value);
 	};
-	return (<>
-		<Helmet>
+	return (
+		<>
+			<Helmet>
 				<title>{`OSUT - Arhiva media`}</title>
-				<meta name="description" content="Articolele și aparițiile în presă ale evenimentelor OSUT." />
-		</Helmet>
-		<div id="arhiva_media">
-			<AppBar
-				position="sticky"
-				style={{
-					boxShadow: "none",
-					padding: "10px",
-					borderRadius: 3,
-					top: "60px",
-					background: "transparent",
-				}}
-				className="whitebg">
-				<Container maxWidth="lg">
-					<Paper
-						style={{
-							boxShadow: "none",
-							padding: "0px 10px",
-							borderRadius: 3,
-						}}>
-						<Toolbar disableGutters={true}>
-							<Typography
-								color="textPrimary"
-								variant="h4"
-								component="h1"
-								style={{
-									flexGrow: 1,
-									paddingLeft: 0,
-								}}
-								gutterBottom>
-								Arhivă media
-							</Typography>
-
-							<FormControl
-								style={{
-									display: "inline",
-								}}>
-								<Select
-									variant="standard"
-									value={an}
-									onChange={handleChangeAn}
-									disableUnderline={true}
-									autoWidth={true}>
-									<MenuItem value={2019}>2019</MenuItem>
-									<MenuItem value={2018}>2018</MenuItem>
-									<MenuItem value={2017}>2017</MenuItem>
-									<MenuItem value={2016}>2016</MenuItem>
-									<MenuItem value={2015}>2015</MenuItem>
-									<MenuItem value={2014}>2014</MenuItem>
-									<MenuItem value={2013}>2013</MenuItem>
-									<MenuItem value={2012}>2012</MenuItem>
-									<MenuItem value={2011}>2011</MenuItem>
-									<MenuItem value={2010}>2010</MenuItem>
-									<MenuItem value={2009}>2009</MenuItem>
-								</Select>
-							</FormControl>
-						</Toolbar>
-					</Paper>
-				</Container>
-			</AppBar>
-			<Container maxWidth="lg">
-				<Grid
-					container
-					spacing={3}
-					direction="row"
-					justify="space-between"
-					alignItems="flex-start"
+				<meta
+					name="description"
+					content="Articolele și aparițiile în presă ale evenimentelor OSUT."
+				/>
+			</Helmet>
+			<div id="arhiva_media">
+				<AppBar
+					position="sticky"
+					style={{
+						boxShadow: "none",
+						padding: "10px",
+						borderRadius: 3,
+						top: "60px",
+						background: "transparent",
+					}}
 					className="whitebg">
+					<Container maxWidth="lg">
+						<Paper
+							style={{
+								boxShadow: "none",
+								padding: "0px 10px",
+								borderRadius: 3,
+							}}>
+							<Toolbar disableGutters={true}>
+								<Typography
+									color="textPrimary"
+									variant="h4"
+									component="h1"
+									style={{
+										flexGrow: 1,
+										paddingLeft: 0,
+									}}
+									gutterBottom>
+									Arhivă media
+								</Typography>
+
+								<FormControl
+									style={{
+										display: "inline",
+									}}>
+									<Select
+										variant="standard"
+										value={an}
+										onChange={handleChangeAn}
+										disableUnderline={true}
+										autoWidth={true}>
+										<MenuItem value={2019}>2019</MenuItem>
+										<MenuItem value={2018}>2018</MenuItem>
+										<MenuItem value={2017}>2017</MenuItem>
+										<MenuItem value={2016}>2016</MenuItem>
+										<MenuItem value={2015}>2015</MenuItem>
+										<MenuItem value={2014}>2014</MenuItem>
+										<MenuItem value={2013}>2013</MenuItem>
+										<MenuItem value={2012}>2012</MenuItem>
+										<MenuItem value={2011}>2011</MenuItem>
+										<MenuItem value={2010}>2010</MenuItem>
+										<MenuItem value={2009}>2009</MenuItem>
+									</Select>
+								</FormControl>
+							</Toolbar>
+						</Paper>
+					</Container>
+				</AppBar>
+				<Container maxWidth="lg">
 					<Grid
-						item
-						xs={12}
-						md={8}
-						lg={8}
-						style={{
-							marginTop: 15,
-						}}>
-						{arhiva.map((med) => {
-							if (med.titlu === "-" || med.titlu === "404") return;
-							if (med.an !== an) return;
-							return (
-								<LinkMedia
-									titlu={med.titlu}
-									sursa={url_domain(med.link)}
-									data="12 decembrie 2019"
-									url={med.link}
-									an={med.an}
-								/>
-							);
-						})}
+						container
+						spacing={3}
+						direction="row"
+						justify="space-between"
+						alignItems="flex-start"
+						className="whitebg">
+						<Grid
+							item
+							xs={12}
+							md={8}
+							lg={8}
+							style={{
+								marginTop: 15,
+							}}>
+							{arhiva.map((med) => {
+								if (med.titlu === "-" || med.titlu === "404") return;
+								if (med.an !== an) return;
+								return (
+									<LinkMedia
+										titlu={med.titlu}
+										sursa={url_domain(med.link)}
+										data="12 decembrie 2019"
+										url={med.link}
+										an={med.an}
+									/>
+								);
+							})}
+						</Grid>
 					</Grid>
-				</Grid>
-			</Container>
-		</div>
+				</Container>
+			</div>
 		</>
 	);
 };

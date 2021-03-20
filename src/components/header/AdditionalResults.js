@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import { Proiect } from "../proiecte/Proiecte";
 import wsu from "../../img/bgproiecte/wsu.jpg";
 import sf from "../../img/bgproiecte/sf.jpg";

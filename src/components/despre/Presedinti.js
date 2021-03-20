@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
 
 const presedinti = [

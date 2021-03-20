@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Intrebari from "../intrebari/Intrebari";
@@ -87,7 +87,6 @@ const Informatii = () => {
 	});
 	return (
 		<>
-			
 			<Container maxWidth="lg" id="centru_ajutor" style={{ marginTop: "30px" }}>
 				<Grid container spacing={4} direction="row" alignItems="flex-start">
 					{info.length !== 0 ? (
@@ -115,7 +114,10 @@ const Informatii = () => {
 			<ContacteazaNe />
 			<Helmet>
 				<title>{`OSUT - Info studenți`}</title>
-				<meta name="description" content="Diverse informații privind parcursul academic al unui student la Universitatea de Vest din Timișoara (UVT)." />
+				<meta
+					name="description"
+					content="Diverse informații privind parcursul academic al unui student la Universitatea de Vest din Timișoara (UVT)."
+				/>
 			</Helmet>
 		</>
 	);
