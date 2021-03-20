@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
@@ -101,7 +101,9 @@ const IntrebariInformatii = () => {
 															style={{
 																fontWeight: 400,
 																marginBottom: 6,
+
 																transition: "background .1s",
+
 															}}>
 															{item.titlu}
 														</Typography>

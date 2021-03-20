@@ -1,6 +1,6 @@
 import PictureAsPdfIcon from "@material-ui/icons/PictureAsPdf";
 import React, { useState, useRef, useEffect } from "react";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import Grd from "../reuse/Grd";
 import "./docs.css";
 import Document from "./Document";

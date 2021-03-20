@@ -1,10 +1,9 @@
 import React from "react";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { Submenu } from "./Despre";
-import Helmet from 'react-helmet';
-
+import Helmet from "react-helmet";
 
 const Presedinte = ({ perioada, prenume, nume }) => (
 	<Grid item xs={12} md={6} lg={4}>
@@ -210,61 +209,62 @@ const presedinti = [
 
 export default function DesprePresedinti() {
 	return (
-
 		<>
-		
-		<Helmet>
+			<Helmet>
 				<title>{`Istoric președinți - OSUT`}</title>
-				<meta name="description" content="Detalii despre președinții Organizației Studenților din Universitatea de Vest din Timișoara." />
+				<meta
+					name="description"
+					content="Detalii despre președinții Organizației Studenților din Universitatea de Vest din Timișoara."
+				/>
 			</Helmet>
-		<div id="scurt-istoric">
-			<Submenu page={3} />
-			<Container maxWidth="lg">
-				<div className="whitebg">
-					<Grid
-						container
-						spacing={3}
-						direction="row"
-						justify="flex-start"
-						alignItems="flex-start"
-						style={{ marginBottom: "20px" }}>
-						<Grid item xs={12} md={12}>
-							<Typography
-								color="textPrimary"
-								variant="h4"
-								component="blockquote"
-								gutterBottom>
-								Președinți OSUT
-							</Typography>
-							<Typography
-								color="textSecondary"
-								variant="body1"
-								component="blockquote"
-								style={{ maxWidth: "65ch" }}
-								gutterBottom>
-								{/* Lorem Ipsum is simply dummy text of the printing and typesetting
+			<div id="scurt-istoric">
+				<Submenu page={3} />
+				<Container maxWidth="lg">
+					<div className="whitebg">
+						<Grid
+							container
+							spacing={3}
+							direction="row"
+							justify="flex-start"
+							alignItems="flex-start"
+							style={{ marginBottom: "20px" }}>
+							<Grid item xs={12} md={12}>
+								<Typography
+									color="textPrimary"
+									variant="h4"
+									component="blockquote"
+									gutterBottom>
+									Președinți OSUT
+								</Typography>
+								<Typography
+									color="textSecondary"
+									variant="body1"
+									component="blockquote"
+									style={{ maxWidth: "65ch" }}
+									gutterBottom>
+									{/* Lorem Ipsum is simply dummy text of the printing and typesetting
 								industry. Lorem Ipsum has been the industry's standard dummy
 								text ever since the 1500s */}
-							</Typography>
+								</Typography>
+							</Grid>
 						</Grid>
-					</Grid>
-					<Grid
-						container
-						spacing={3}
-						direction="row"
-						justify="space-between"
-						alignItems="flex-start">
-						{presedinti.map((presed) => (
-							<Presedinte
-								perioada={`${presed.inceput}-${presed.final}`}
-								prenume={presed.nume}
-								nume={presed.nume2}
-							/>
-						))}
-					</Grid>
-				</div>
-			</Container>
-		</div>
+						<Grid
+							container
+							spacing={3}
+							direction="row"
+							justify="space-between"
+							alignItems="flex-start">
+							{presedinti.map((presed) => (
+								<Presedinte
+									perioada={`${presed.inceput}-${presed.final}`}
+									prenume={presed.nume}
+									nume={presed.nume2}
+								/>
+							))}
+						</Grid>
+					</div>
+				</Container>
+			</div>
 		</>
 	);
 }
