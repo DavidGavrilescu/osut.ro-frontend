@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Typography } from "@material-ui/core";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import "./despre.css";
 
 //dsad
@@ -64,14 +64,16 @@ const BCE = [
 	// },
 	{
 		nume: "Patricia VĂLEANU",
-		functie: "Vicepreședinte responsabil cu organizarea internă și cu proiectele OSUT",
+		functie:
+			"Vicepreședinte responsabil cu organizarea internă și cu proiectele OSUT",
 		telefon: "0769 616 250",
 		mail: "patricia.valeanu@osut.ro",
 		poza: "p2",
 	},
 	{
 		nume: "Andreea-Raluca ARGEȘEANU",
-		functie: "Vicepreședinte responsabil cu activitatea de reprezentare studențească",
+		functie:
+			"Vicepreședinte responsabil cu activitatea de reprezentare studențească",
 		telefon: "0746 036 096",
 		mail: "andreea.argeseanu@osut.ro",
 		poza: "andreea",

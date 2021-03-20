@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
@@ -35,10 +35,18 @@ const IntrebariInformatii = () => {
 		<>
 			<Helmet>
 				<title>{`OSUT - Info studenți - ${categorie}`}</title>
-				<meta name="description" content="Diverse informații privind parcursul academic al unui student la Universitatea de Vest din Timișoara (UVT)." />
+				<meta
+					name="description"
+					content="Diverse informații privind parcursul academic al unui student la Universitatea de Vest din Timișoara (UVT)."
+				/>
 			</Helmet>
 			<Container maxWidth="lg" id="centru_ajutor" style={{ marginTop: "20px" }}>
-			<Grid container spacing={4} direction="row" justify="flex-start" style={{position:"relative"}}>
+				<Grid
+					container
+					spacing={4}
+					direction="row"
+					justify="flex-start"
+					style={{ position: "relative" }}>
 					{info.length === 0 ? (
 						<>
 							<Grid item xs={12} style={{ textAlign: "center" }}>
@@ -50,7 +58,7 @@ const IntrebariInformatii = () => {
 						<>
 							<Grid item xs={12}>
 								<Breadcrumbs aria-label="breadcrumb">
-									<Link color="inherit" to="/informatii-studenti">
+									<Link color="inherit" to="/info-studenti">
 										<Typography
 											color="textSecondary"
 											variant="body1"
@@ -58,9 +66,7 @@ const IntrebariInformatii = () => {
 											Informații studenți
 										</Typography>
 									</Link>
-									<Link
-										color="inherit"
-										to={"/informatii-studenti/" + categorie}>
+									<Link color="inherit" to={"/info-studenti/" + categorie}>
 										<Typography
 											color="textPrimary"
 											variant="body1"
@@ -72,36 +78,39 @@ const IntrebariInformatii = () => {
 							</Grid>
 							<Hidden smDown>
 								<Grid item xs={12} md={3}>
-								<div className="sticky">
+									<div className="sticky">
+										{categorii.length !== 0 &&
+											categorii.map((item) => (
+												<>
+													<Link
+														key={item.id}
+														to={"" + item.link}
+														style={{ color: "inherit" }}>
+														<Typography
+															color="textSecondary"
+															variant="h5"
+															className="categorieInfo"
+															component="h5"
+															color={
+																item.link.toLowerCase() ==
+																categorie.toLowerCase()
+																	? "primary"
+																	: "default"
+															}
+															gutterBottom
+															style={{
+																fontWeight: 400,
+																marginBottom: 6,
 
-									{categorii.length !== 0 &&
-										categorii.map((item) => (
-											<>
-												<Link
-													key={item.id}
-													to={"" + item.link}
-													style={{ color: "inherit" }}>
-													<Typography
-														color="textSecondary"
-														variant="h5"
-														className="categorieInfo"
-														component="h5"
-														color={
-															item.link.toLowerCase() == categorie.toLowerCase()
-																? "primary"
-																: "default"
-														}
-														gutterBottom
-														style={{
-															fontWeight: 400,
-															marginBottom: 6,
-														}}>
-														{item.titlu}
-													</Typography>
-												</Link>
-											</>
-										))}
-										</div>
+																transition: "background .1s",
+
+															}}>
+															{item.titlu}
+														</Typography>
+													</Link>
+												</>
+											))}
+									</div>
 								</Grid>
 							</Hidden>
 							<Grid item xs={12} md={9}>
@@ -112,12 +121,21 @@ const IntrebariInformatii = () => {
 												<Link
 													key={item.id}
 													className="informatieLink"
-													to={`/informatii-studenti/${categorie}/${item.link}`}>
+													to={`/info-studenti/${categorie}/${item.link}`}>
 													<Typography
 														color="textPrimary"
 														variant="h6"
 														component="div"
-														style={{ fontWeight: 200 }}
+														style={{
+															fontWeight: 200,
+															borderBottom: "1px solid rgba(100,100,100,.08)",
+															margin: "0px 5px",
+															padding: "10px 8px",
+															textOverflow: "ellipsis",
+															overflow: "hidden",
+															whiteSpace: "nowrap",
+															transition: "background .1s",
+														}}
 														gutterBottom>
 														{item.intrebare}
 													</Typography>

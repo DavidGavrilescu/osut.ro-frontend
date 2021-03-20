@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
+import React, { useState } from "react";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { Link, NavLink } from "react-router-dom";
 import IconButton from "@material-ui/core/IconButton";
@@ -10,14 +10,8 @@ import Tooltip from "@material-ui/core/Tooltip";
 import osut from "../../img/osut-alb-meniu.png";
 import osutDark from "../../img/osut-negru-meniu.png";
 import SearchIcon from "@material-ui/icons/Search";
-import TextField from "@material-ui/core/TextField";
 import Hidden from "@material-ui/core/Hidden";
 import Container from "@material-ui/core/Container";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
 import Cautare from "./Cautare";
 import Paper from "@material-ui/core/Paper";
 import "./header.css";
@@ -54,7 +48,7 @@ function SimpleBottomNavigation() {
 				<BottomNavigationAction
 					label="Informații"
 					component={Link}
-					to="/informatii-studenti"
+					to="/info-studenti"
 				/>
 				<BottomNavigationAction component={Link} to="/blog" label="Articole" />
 
@@ -133,7 +127,7 @@ const MeniuMobil = ({ inchide }) => {
 					<NavLink
 						activeClassName="selected"
 						color="default"
-						to="/informatii-studenti"
+						to="/info-studenti"
 						onClick={() => inchide()}
 						className={classes.link}>
 						<Typography variant="h2" color="default">
@@ -249,7 +243,7 @@ const Header = ({ mode, changeMode, fixed = true }) => {
 								</NavLink>
 								<NavLink
 									activeClassName="selected"
-									to="/informatii-studenti"
+									to="/info-studenti"
 									className={classes.link}>
 									<Button className={classes.linkbutton} color="default">
 										Info studenți

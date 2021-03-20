@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import mtsLight from "../../img/despre/mtsLight.png";
 import mtsDark from "../../img/despre/mtsDark.png";
 import anosrLight from "../../img/despre/anosrLight.png";

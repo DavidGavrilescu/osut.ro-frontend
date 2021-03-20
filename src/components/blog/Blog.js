@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Post from "./Post";
 import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import MenuItem from "@material-ui/core/MenuItem";

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Typography } from "@material-ui/core";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import "./despre.css";
 import perseverenta from "../../img/perseverenta.png";
 /* :> */

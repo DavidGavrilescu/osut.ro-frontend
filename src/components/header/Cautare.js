@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
 import { Link, NavLink } from "react-router-dom";
@@ -141,7 +141,7 @@ const Cautare = ({ dark, inchide }) => {
 						style={{
 							marginTop: 58,
 							height: "100vh",
-							overflowY: "scroll",
+							overflowY: "auto",
 							paddingTop: 20,
 						}}>
 						<Grid

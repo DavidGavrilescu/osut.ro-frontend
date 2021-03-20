@@ -132,14 +132,14 @@ const Post = ({
 											__html: titlu,
 										}}></Typography>
 
-									<Typography
+									{/* <Typography
 										variant="body1"
 										color="textPrimary"
 										component="p"
 										dangerouslySetInnerHTML={{
 											__html: truncate(descriere_scurta),
 										}}
-										style={{ padding: "00px 10px" }}></Typography>
+										style={{ padding: "00px 10px" }}></Typography> */}
 								</MUILink>
 							</Link>
 						</div>
@@ -182,14 +182,14 @@ const Post = ({
 											__html: titlu,
 										}}></Typography>
 
-									<Typography
+									{/* <Typography
 										variant="body1"
 										color="textSecondary"
 										component="p"
 										dangerouslySetInnerHTML={{
 											__html: truncate(descriere_scurta),
 										}}
-										style={{ padding: "0px 20px" }}></Typography>
+										style={{ padding: "0px 20px" }}></Typography> */}
 								</div>
 							</Link>
 						</div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "material-ui-image";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import Tooltip from "@material-ui/core/Tooltip";
 
 const Partener = ({ img, imgdark, url, denumire, darkmode }) => {

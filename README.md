@@ -1,13 +1,4 @@
-Aceasta este aplicatia frontend folosita de https://osut.ro<br />
+![osut-alb-meniu c2411f82](https://user-images.githubusercontent.com/1462636/109428791-4cfae880-7a01-11eb-863c-354fb29d970c.png)
+
+Frontend app for https://osut.ro<br />
 </hr>
-
-
-
-## Scripturi npm
-
-Din folderul proiectului poti rula comenzile:
-
-### `npm start`
-
-Ruleaza aplicatia local in development mode.<br />
-Deschide [http://localhost:3000](http://localhost:3000) pentru a porni aplicatia in browser.

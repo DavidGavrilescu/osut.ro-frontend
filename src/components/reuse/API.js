@@ -136,7 +136,7 @@ export const incarcaArticoleBlog = async (
 // folosit de homepage
 export const getPosts = (update, per_page = 6, category = "toate", cb) => {
 	let url = `${urlAPI}?posts&per_page=${per_page}&categorie=${category}`;
-	if (category == "toate") url = `${urlAPI}?posts&per_page=${per_page}`;
+	if (category === "toate") url = `${urlAPI}?posts&per_page=${per_page}`;
 	axios
 		.get(url)
 		.then((res) => {

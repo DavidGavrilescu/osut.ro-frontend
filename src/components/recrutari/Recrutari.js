@@ -7,46 +7,49 @@ import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
-const Slide = ({ titlu, text, b1 = "", b2 = "", textB1 = "" }) => {
+const Slide = ({ titlu, text, b1 = "", b2 = "", textB1 = "", textB2 = "" }) => {
 	return (
 		<>
-			<div className="slide">
+			<div className="slide" style={{ padding: "40px 30px" }}>
 				<Typography
 					color="textPrimary"
-					variant="h3"
+					variant="h4"
 					component="h4"
 					gutterBottom
-					style={{ textTransform: "uppercase" }}>
-					{titlu}
-				</Typography>
-				<Typography color="textSecondary" variant="body1" component="p">
-					{text}
-				</Typography>
+					dangerouslySetInnerHTML={{ __html: titlu }}
+					style={{ textTransform: "none" }}
+				/>
+				<Typography
+					color="textSecondary"
+					variant="body1"
+					component="p"
+					dangerouslySetInnerHTML={{ __html: text }}
+				/>
 				<br />
 				{b2 !== "" && (
-					<a href={b2} style={{textDecoration:'none'}} target="_blank">
+					<a href={b2} style={{ textDecoration: "none" }}>
 						<Button
 							variant="contained"
 							color="primary"
 							style={{borderColor: "#fff",marginBottom: 16}}
 							size="large"
-							>
-							Către Formularul 230
+							style={{ marginBottom: 16 }}>
+							{textB2}
 						</Button>
 					</a>
 				)}
-				&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				{b1 !== "" && textB1 && (
-					<a href={b1} style={{textDecoration:'none'}} target="_blank">
+					<a href={b1} style={{ textDecoration: "none" }} target="_blank">
 						<Button
 							variant="contained"
 							color="primary"
-							style={{borderColor: "#fff",marginBottom: 16}}
+							style={{ borderColor: "#fff", marginBottom: 16 }}
 							size="large">
 							{textB1}
 							<ArrowRightAltIcon />
 						</Button>
-						</a>
+					</a>
 				)}
 			</div>
 		</>
@@ -65,18 +68,19 @@ export default function Recrutari() {
 	return (
 		<Container maxWidth="lg" id="containerAnunturi">
 			<div id="slid">
-				<Slider {...settings}>
-					<div style={{ outline: "none" }}>
-						<Slide
-							titlu="Alătură-te mișcării studențești investind în viitor!"
-							text="Ești actualmente angajat și îți dorești să alegi unde investești 3,5% din impozitul pe venit? Formularul 230 îți vine în ajutor!"
-						b1='https://osut.ro/p/redirectioneaza-3-5-din-impozitul-pe-venit-catre-osut-'
-						textB1='Mai multe detalii'
-						b2='https://redirectioneaza.ro/osut'
-						/>
-					</div>
-					
-				</Slider>
+				{/* <Slider {...settings}> */}
+				<div style={{ outline: "none" }}>
+					<Slide
+						titlu="Alătură-te mișcării studențești investind în viitor!"
+						text="Ești actualmente angajat și îți dorești să alegi unde investești 3,5% din impozitul pe venit?<br />
+							Ei bine, îți povestim noi!​"
+						b2="https://osut.ro/p/redirectioneaza-3-5-din-impozitul-pe-venit-catre-osut-"
+						textB2="Mai multe detalii"
+						b1="https://redirectioneaza.ro/osut"
+						textB1="CĂtre formularul 230"
+					/>
+				</div>
+				{/* </Slider> */}
 			</div>
 		</Container>
 	);

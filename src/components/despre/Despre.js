@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Container from "@material-ui/core/Container";
 import { Typography } from "@material-ui/core";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import "./despre.css";
 import { makeStyles } from "@material-ui/core/styles";
 import ProiecteOSUT from "./ProiecteOSUT";
@@ -383,7 +383,10 @@ const Despre = ({ dark }) => {
 		<>
 			<Helmet>
 				<title>{`OSUT - Despre noi`}</title>
-				<meta name="description" content="Informații despre Organizația Studenților din Universitatea de Vest din Timișoara (OSUT)." />
+				<meta
+					name="description"
+					content="Informații despre Organizația Studenților din Universitatea de Vest din Timișoara (OSUT)."
+				/>
 			</Helmet>
 			<div id="despre">
 				<Container maxWidth="lg">

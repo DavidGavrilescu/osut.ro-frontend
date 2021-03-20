@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Container from "@material-ui/core/Container";
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import "./proiecte.css";
 import sf from "../../img/sf.png";
 import wsu from "../../img/wsu.png";

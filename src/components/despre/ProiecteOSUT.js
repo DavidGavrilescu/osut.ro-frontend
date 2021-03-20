@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import sf from "../../img/sflogo.png";
 import sfLight from "../../img/proiecte/sfLight.png";
