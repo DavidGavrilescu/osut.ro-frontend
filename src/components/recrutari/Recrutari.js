@@ -23,18 +23,19 @@ const Slide = ({ titlu, text, b1 = "", b2 = "", textB1 = "" }) => {
 					{text}
 				</Typography>
 				<br />
-				{/* {b2 !== "" && (
+				{b2 !== "" && (
 					<a href={b2} style={{textDecoration:'none'}} target="_blank">
 						<Button
-							variant="outlined"
-							color="default"
+							variant="contained"
+							color="primary"
+							style={{borderColor: "#fff",marginBottom: 16}}
 							size="large"
-							style={{marginBottom: 16}}
 							>
-							Află mai multe
+							Către Formularul 230
 						</Button>
 					</a>
-				)} */}
+				)}
+				&nbsp;&nbsp;&nbsp;&nbsp;
 				{b1 !== "" && textB1 && (
 					<a href={b1} style={{textDecoration:'none'}} target="_blank">
 						<Button
@@ -67,12 +68,11 @@ export default function Recrutari() {
 				<Slider {...settings}>
 					<div style={{ outline: "none" }}>
 						<Slide
-							titlu="OSUT te invită să te alături mișcării studențești, investind în viitor!"
-							text="Ești actualmente angajat și îți dorești să alegi unde investești 3,5% din impozitul pe venit? 
-							Ei bine, îți povestim noi!​"
+							titlu="Alătură-te mișcării studențești investind în viitor!"
+							text="Ești actualmente angajat și îți dorești să alegi unde investești 3,5% din impozitul pe venit? Formularul 230 îți vine în ajutor!"
 						b1='https://osut.ro/p/redirectioneaza-3-5-din-impozitul-pe-venit-catre-osut-'
 						textB1='Mai multe detalii'
-						b2='Pisici'
+						b2='https://redirectioneaza.ro/osut'
 						/>
 					</div>
 					
