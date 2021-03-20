@@ -78,13 +78,13 @@ const BCE = [
 		mail: "andreea.argeseanu@osut.ro",
 		poza: "andreea",
 	},
-	// {
-	// 	nume: "Diana-Loredana IUGA",
-	// 	functie: "Secretar General",
-	// 	telefon: "0743 914 800",
-	// 	mail: "diana@osut.ro",
-	// 	poza: "diana_mare",
-	// },
+	{
+		nume: "Ana-Maria ENESCU",
+		functie: "Secretar General",
+		telefon: "0743 914 800",
+		mail: "diana@osut.ro",
+		poza: "ana",
+	},
 	{
 		nume: "Darius-Dragoș ȚEPERDEL",
 		functie: "Coordonator Resurse Umane (HR)",
@@ -92,13 +92,13 @@ const BCE = [
 		mail: "darius@osut.ro",
 		poza: "darius_teperdel",
 	},
-	{
-		nume: "Marcus-Radu MAN",
-		functie: "Coordonator Social-Educaţional-Cercetare (S.E.C.)",
-		telefon: "",
-		mail: "",
-		poza: "Marcus",
-	},
+	// {
+	// 	nume: "Marcus-Radu MAN",
+	// 	functie: "Coordonator Social-Educaţional-Cercetare (S.E.C.)",
+	// 	telefon: "",
+	// 	mail: "",
+	// 	poza: "Marcus",
+	// },
 	{
 		nume: "Emilian-Andrei BOGDAN",
 		functie: "Coordonator IT și Logistică (IT&L)",
