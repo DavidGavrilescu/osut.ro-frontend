@@ -77,7 +77,8 @@
 }
 
 .dark_mode .thepostcard {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: transparent;
 }
 
 .light_mode .thepostcard {
@@ -126,7 +127,7 @@
 }
 
 .dark_mode .whitebg {
-  background: rgba(80, 80, 90, 0.1);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .light_mode .whitebg {
