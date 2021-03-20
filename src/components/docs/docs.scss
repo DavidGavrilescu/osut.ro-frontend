@@ -1,6 +1,7 @@
 .Doc {
 	&:hover {
 		background: rgba(170, 170, 170, 0.1);
+		border-radius:8px;
 	}
 	a {
 		text-decoration: none;
@@ -10,7 +11,7 @@
 		margin: 0px 20px;
 		padding: 15px 0px;
 		border-radius: 0px;
-		border-bottom: 1px solid rgba(170, 170, 170, 0.1);
+		// border-bottom: 1px solid rgba(170, 170, 170, 0.1);
 		transition: all 0.1s;
 		min-height: 60px;
 		width: 90%;

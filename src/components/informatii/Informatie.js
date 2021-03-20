@@ -100,6 +100,7 @@ const Informatie = () => {
 															gutterBottom
 															style={{
 																fontWeight: 400,
+																transition: "background .1s",
 															}}>
 															{item.titlu}
 														</Typography>

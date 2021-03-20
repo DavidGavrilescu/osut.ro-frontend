@@ -36,7 +36,6 @@ export default function Document({
 								component="div"
 								style={{
 									textTransform: "none",
-
 									fontWeight: 400,
 								}}>
 								{nume}
