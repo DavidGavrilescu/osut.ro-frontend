@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
@@ -101,6 +101,9 @@ const IntrebariInformatii = () => {
 															style={{
 																fontWeight: 400,
 																marginBottom: 6,
+
+																transition: "background .1s",
+
 															}}>
 															{item.titlu}
 														</Typography>
@@ -123,7 +126,16 @@ const IntrebariInformatii = () => {
 														color="textPrimary"
 														variant="h6"
 														component="div"
-														style={{ fontWeight: 200 }}
+														style={{
+															fontWeight: 200,
+															borderBottom: "1px solid rgba(100,100,100,.08)",
+															margin: "0px 5px",
+															padding: "10px 8px",
+															textOverflow: "ellipsis",
+															overflow: "hidden",
+															whiteSpace: "nowrap",
+															transition: "background .1s",
+														}}
 														gutterBottom>
 														{item.intrebare}
 													</Typography>

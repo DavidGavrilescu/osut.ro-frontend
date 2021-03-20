@@ -77,7 +77,8 @@
 }
 
 .dark_mode .thepostcard {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: transparent;
 }
 
 .light_mode .thepostcard {
@@ -126,7 +127,7 @@
 }
 
 .dark_mode .whitebg {
-  background: rgba(80, 80, 90, 0.1);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .light_mode .whitebg {
@@ -135,7 +136,7 @@
 
 .related_article {
   border-bottom: 1px solid rgba(200, 200, 200, 0.01);
-  padding: 16px 20px;
+  padding: 3px 20px;
   text-decoration: none;
   display: block;
 }
@@ -143,6 +144,9 @@
 .related_article p {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  padding: 16px 16px;
+  margin-left: -8px;
+  border-radius: 8px;
 }
 
 .related_article:hover {
@@ -150,7 +154,7 @@
 }
 
 .related_article:hover p {
-  color: #d02021;
+  background: rgba(200, 200, 200, 0.1);
 }
 
 .related_article:hover .tag_mic {

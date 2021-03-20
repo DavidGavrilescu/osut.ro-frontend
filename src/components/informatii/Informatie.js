@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
@@ -100,6 +100,7 @@ const Informatie = () => {
 															gutterBottom
 															style={{
 																fontWeight: 400,
+																transition: "background .1s",
 															}}>
 															{item.titlu}
 														</Typography>

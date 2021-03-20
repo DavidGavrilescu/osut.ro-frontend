@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Typography } from "@material-ui/core";
-import Grid from "@material-ui/core/grid";
+import { Grid } from "@material-ui/core";
 import "./despre.css";
 
 //dsad
@@ -64,25 +64,27 @@ const BCE = [
 	// },
 	{
 		nume: "Patricia VĂLEANU",
-		functie: "Vicepreședinte responsabil cu organizarea internă și cu proiectele OSUT",
+		functie:
+			"Vicepreședinte responsabil cu organizarea internă și cu proiectele OSUT",
 		telefon: "0769 616 250",
 		mail: "patricia.valeanu@osut.ro",
 		poza: "p2",
 	},
 	{
 		nume: "Andreea-Raluca ARGEȘEANU",
-		functie: "Vicepreședinte responsabil cu activitatea de reprezentare studențească",
+		functie:
+			"Vicepreședinte responsabil cu activitatea de reprezentare studențească",
 		telefon: "0746 036 096",
 		mail: "andreea.argeseanu@osut.ro",
 		poza: "andreea",
 	},
-	// {
-	// 	nume: "Diana-Loredana IUGA",
-	// 	functie: "Secretar General",
-	// 	telefon: "0743 914 800",
-	// 	mail: "diana@osut.ro",
-	// 	poza: "diana_mare",
-	// },
+	{
+		nume: "Ana-Maria ENESCU",
+		functie: "Secretar General",
+		telefon: "0743 914 800",
+		mail: "diana@osut.ro",
+		poza: "ana",
+	},
 	{
 		nume: "Darius-Dragoș ȚEPERDEL",
 		functie: "Coordonator Resurse Umane (HR)",
@@ -90,13 +92,13 @@ const BCE = [
 		mail: "darius@osut.ro",
 		poza: "darius_teperdel",
 	},
-	{
-		nume: "Marcus-Radu MAN",
-		functie: "Coordonator Social-Educaţional-Cercetare (S.E.C.)",
-		telefon: "",
-		mail: "",
-		poza: "Marcus",
-	},
+	// {
+	// 	nume: "Marcus-Radu MAN",
+	// 	functie: "Coordonator Social-Educaţional-Cercetare (S.E.C.)",
+	// 	telefon: "",
+	// 	mail: "",
+	// 	poza: "Marcus",
+	// },
 	{
 		nume: "Emilian-Andrei BOGDAN",
 		functie: "Coordonator IT și Logistică (IT&L)",
