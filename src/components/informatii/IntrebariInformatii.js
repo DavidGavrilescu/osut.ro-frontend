@@ -58,7 +58,7 @@ const IntrebariInformatii = () => {
 						<>
 							<Grid item xs={12}>
 								<Breadcrumbs aria-label="breadcrumb">
-									<Link color="inherit" to="/informatii-studenti">
+									<Link color="inherit" to="/info-studenti">
 										<Typography
 											color="textSecondary"
 											variant="body1"
@@ -66,9 +66,7 @@ const IntrebariInformatii = () => {
 											Informații studenți
 										</Typography>
 									</Link>
-									<Link
-										color="inherit"
-										to={"/informatii-studenti/" + categorie}>
+									<Link color="inherit" to={"/info-studenti/" + categorie}>
 										<Typography
 											color="textPrimary"
 											variant="body1"
@@ -103,6 +101,9 @@ const IntrebariInformatii = () => {
 															style={{
 																fontWeight: 400,
 																marginBottom: 6,
+
+																transition: "background .1s",
+
 															}}>
 															{item.titlu}
 														</Typography>
@@ -120,12 +121,21 @@ const IntrebariInformatii = () => {
 												<Link
 													key={item.id}
 													className="informatieLink"
-													to={`/informatii-studenti/${categorie}/${item.link}`}>
+													to={`/info-studenti/${categorie}/${item.link}`}>
 													<Typography
 														color="textPrimary"
 														variant="h6"
 														component="div"
-														style={{ fontWeight: 200 }}
+														style={{
+															fontWeight: 200,
+															borderBottom: "1px solid rgba(100,100,100,.08)",
+															margin: "0px 5px",
+															padding: "10px 8px",
+															textOverflow: "ellipsis",
+															overflow: "hidden",
+															whiteSpace: "nowrap",
+															transition: "background .1s",
+														}}
 														gutterBottom>
 														{item.intrebare}
 													</Typography>

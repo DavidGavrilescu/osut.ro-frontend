@@ -112,11 +112,11 @@ const RelatedArticle = ({ titlu, id, urlfriendly, tags }) => {
 				component="p"
 				gutterBottom
 				dangerouslySetInnerHTML={{ __html: titlu }}></Typography>
-			{tags &&
+			{/* {tags &&
 				String(tags) !== "" &&
 				String(tags)
 					.split(",")
-					.map((tag) => <Eticheta key={tag} small={true} denumire={tag} />)}
+					.map((tag) => <Eticheta key={tag} small={true} denumire={tag} />)} */}
 		</Link>
 	);
 };
@@ -298,7 +298,7 @@ export default function Singlet({ post_id }) {
 												borderBottom: "1px solid rgba(180,180,190,.2)",
 												padding: "20px",
 											}}>
-											Atașament(e)
+											Atașamente
 										</Typography>
 										<Atasamente array={attachments} />
 									</div>

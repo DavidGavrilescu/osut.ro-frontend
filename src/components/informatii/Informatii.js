@@ -58,8 +58,8 @@ const ContacteazaNe = () => (
 const Informatie = ({ titlu, descriere, link }) => {
 	return (
 		<>
-			<Grid item xs={12} md={4} style={{ marginBottom: 30 }}>
-				<Link to={"/informatii-studenti/" + link}>
+			<Grid item xs={12} md={6} lg={4} style={{ marginBottom: 30 }}>
+				<Link to={"/info-studenti/" + link}>
 					<div className="sectiune whitebg" role="button">
 						<Typography
 							color="textPrimary"
