@@ -136,7 +136,7 @@
 
 .related_article {
   border-bottom: 1px solid rgba(200, 200, 200, 0.01);
-  padding: 16px 20px;
+  padding: 3px 20px;
   text-decoration: none;
   display: block;
 }
@@ -144,6 +144,9 @@
 .related_article p {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  padding: 16px 16px;
+  margin-left: -8px;
+  border-radius: 8px;
 }
 
 .related_article:hover {
@@ -151,7 +154,7 @@
 }
 
 .related_article:hover p {
-  color: #d02021;
+  background: rgba(200, 200, 200, 0.1);
 }
 
 .related_article:hover .tag_mic {
