@@ -141,7 +141,7 @@ const Cautare = ({ dark, inchide }) => {
 						style={{
 							marginTop: 58,
 							height: "100vh",
-							overflowY: "scroll",
+							overflowY: "auto",
 							paddingTop: 20,
 						}}>
 						<Grid
