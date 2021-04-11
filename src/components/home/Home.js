@@ -25,11 +25,7 @@ const Home = () => {
 
 	return (
 		<>
-<<<<<<< HEAD
-			<Recrutari />
-=======
 			<Banner />
->>>>>>> 0bb4a57f4516dc857654fd31886243897995a3f3
 			<Container maxWidth="lg">
 				{items.length > 0 ? <Blog items={items} categorii={categ} /> : ""}
 				{/* <Separator /> */}
