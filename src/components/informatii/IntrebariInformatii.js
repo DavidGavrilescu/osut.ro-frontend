@@ -11,7 +11,7 @@ import {
 } from "../reuse/API";
 
 import "./informatii.css";
-import Hidden from "@material-ui/core/hidden";
+import { Hidden } from "@material-ui/core";
 import Helmet from "react-helmet";
 import Loader from "../Loader/Loader";
 
@@ -103,7 +103,6 @@ const IntrebariInformatii = () => {
 																marginBottom: 6,
 
 																transition: "background .1s",
-
 															}}>
 															{item.titlu}
 														</Typography>
