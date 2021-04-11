@@ -31,6 +31,7 @@ const Slide = ({ titlu, text, b1 = "", b2 = "", textB1 = "", textB2 = "" }) => {
 						<Button
 							variant="outlined"
 							color="default"
+							style={{borderColor: "#fff",marginBottom: 16}}
 							size="large"
 							style={{ marginBottom: 16 }}>
 							{textB2}

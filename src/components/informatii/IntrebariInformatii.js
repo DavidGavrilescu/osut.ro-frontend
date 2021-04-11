@@ -128,7 +128,7 @@ const IntrebariInformatii = () => {
 														style={{
 															fontWeight: 200,
 															borderBottom: "1px solid rgba(100,100,100,.08)",
-															margin: "0px 5px",
+															margin: "5.5px 5px",
 															padding: "10px 8px",
 															textOverflow: "ellipsis",
 															overflow: "hidden",
