@@ -118,10 +118,13 @@ export default function FooterWebsite({ dark }) {
 									target="_blank"
 									follow="follow"
 									key={key}
+									className="footerLink"
 									style={{ display: "block" }}>
+									<div className="bg"></div>
 									<Typography
 										className="block"
 										color="textSecondary"
+										component="p"
 										variant="subtitle2">
 										{proiect[0]}
 									</Typography>
@@ -137,9 +140,15 @@ export default function FooterWebsite({ dark }) {
 								Despre
 							</Typography>
 							{Despre.map((despre, key) => (
-								<Link to={despre[1]} style={{ display: "block" }} key={key}>
+								<Link
+									to={despre[1]}
+									style={{ display: "block" }}
+									className="footerLink"
+									key={key}>
+									<div className="bg"></div>
 									<Typography
 										className="block"
+										component="p"
 										color="textSecondary"
 										variant="subtitle2">
 										{despre[0]}
@@ -156,16 +165,22 @@ export default function FooterWebsite({ dark }) {
 								Linkuri utile
 							</Typography>
 							{AlteLinkuri.map((alte, key) => (
-								<Link to={alte[1]} style={{ display: "block" }} key={key}>
+								<Link
+									to={alte[1]}
+									style={{ display: "block" }}
+									className="footerLink"
+									key={key}>
+									<div className="bg"></div>
 									<Typography
 										color="textSecondary"
 										className="block"
+										component="p"
 										variant="subtitle2">
 										{alte[0]}
 									</Typography>
 								</Link>
 							))}
-							<a
+							{/* <a
 								href="https://old.osut.ro"
 								target="_blank"
 								follow="follow"
@@ -173,10 +188,11 @@ export default function FooterWebsite({ dark }) {
 								<Typography
 									className="block"
 									color="textSecondary"
+									component="p"
 									variant="subtitle2">
-									Website-ul vechi
+									Website vechi
 								</Typography>
-							</a>
+							</a> */}
 						</Grid>
 						<Grid item xs={12} sm={6} md={2}>
 							<Typography
@@ -189,11 +205,14 @@ export default function FooterWebsite({ dark }) {
 								IS.slice(0, 6).map((info, key) => (
 									<Link
 										key={key}
+										className="footerLink"
 										to={"/informatii-studenti/" + info.link}
 										style={{ display: "block" }}>
+										<div className="bg"></div>
 										<Typography
 											color="textSecondary"
 											className="block"
+											component="p"
 											variant="subtitle2">
 											{info.titlu}
 										</Typography>

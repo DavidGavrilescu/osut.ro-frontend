@@ -94,33 +94,6 @@ const Blog = ({ items, categorii }) => {
 					direction="row"
 					alignItems="stretch"
 					alignContent="stretch">
-					{/* 	<Grid
-						key="12312312"
-						item
-						xs={12}
-						sm={6}
-						lg={4}
-						className={classes.card}
-						style={{ marginTop: "10px" }}>
-						<Post
-							video="videos/pvideo.mp4"
-							key={"1231231"}
-							type="short"
-							titlu={"Retrospectiva anului 2020"}
-							descriere_scurta={
-								"Acesta este retrospectiva anului si nu stiu ce sa mai scriu aici dar trebuie sa scriu ceva."
-							}
-							id_autor={"asd"}
-							continut={"asd"}
-							id="asdasdas"
-							denumire_categorie="asdasdas"
-							poza=""
-							timestamp="312312312"
-							text={false}
-							urlfriendly="sadasdadas"
-							culoare_categorie="dsadas"
-						/>
-					</Grid> */}
 					{items2.length == [] && (
 						<Grid item xs={12} style={{ textAlign: "center" }}>
 							<Loader />

@@ -5,6 +5,41 @@ footer#websiteFooter {
 	box-shadow: none;
 	border-top: 1px solid rgba(180, 180, 180, 0.1);
 	margin-top: 60px;
+	a.footerLink{
+		transition:all .3s;
+		margin-bottom:5px;
+		padding:2px;
+		display:inline-block;
+		position:relative;
+		width:100%;
+		height:22px;
+		overflow:hidden;
+		p{
+			position:absolute;
+			left:0px;
+			bottom:0px;
+			width:100%;
+			height:22px;
+		}
+		div.bg{
+			position:absolute;
+			left:-10px;
+			bottom:0px;
+			background:transparent;
+			width:0px;
+			transition:all .3s;
+			height:69%;
+			z-index:0;
+		}
+		&:hover{
+			div.bg{
+				background:#fff;
+				opacity:0.1;
+				width:70%;
+				padding:-10px;
+			}
+		}
+	}
 	button {
 		margin-right: 6px;
 		opacity: 0.8;
@@ -28,13 +63,16 @@ footer#websiteFooter {
 			border-bottom: 2px solid transparent;
 			padding-bottom: 0px;
 			margin-bottom: 3px;
-			transition: border-color 0.1s;
+			transition: all 0.3s;
 		}
+		
 		&:hover {
 			text-decoration: none;
 			button {
 				text-decoration: none;
-				border-color: inherit;
+				border-color: none;
+				background:none;
+			
 			}
 		}
 	}

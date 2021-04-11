@@ -27,16 +27,15 @@ const Slide = ({ titlu, text, b1 = "", b2 = "", textB1 = "", textB2 = "" }) => {
 				/>
 				<br />
 				{b2 !== "" && (
-					<a href={b2} style={{ textDecoration: "none" }}>
+					<Link to={b2} style={{ textDecoration: "none" }}>
 						<Button
 							variant="outlined"
 							color="default"
-							style={{borderColor: "#fff",marginBottom: 16}}
 							size="large"
 							style={{ marginBottom: 16 }}>
 							{textB2}
 						</Button>
-					</a>
+					</Link>
 				)}
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				{b1 !== "" && textB1 && (
@@ -56,7 +55,7 @@ const Slide = ({ titlu, text, b1 = "", b2 = "", textB1 = "", textB2 = "" }) => {
 	);
 };
 
-export default function Recrutari() {
+export default function Banner() {
 	const settings = {
 		dots: true,
 		infinite: true,
@@ -74,7 +73,7 @@ export default function Recrutari() {
 						titlu="OSUT te invită să te alături mișcării studențești,<br /> investind în viitor!"
 						text="Ești actualmente angajat și îți dorești să alegi unde investești 3,5% din impozitul pe venit?<br />
 							Ei bine, îți povestim noi!​"
-						b2="https://osut.ro/p/redirectioneaza-3-5-din-impozitul-pe-venit-catre-osut-"
+						b2="p/redirectioneaza-3-5-din-impozitul-pe-venit-catre-osut"
 						textB2="Mai multe detalii"
 						b1="https://redirectioneaza.ro/osut"
 						textB1="CĂtre formularul 230"

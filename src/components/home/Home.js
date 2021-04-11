@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Blog from "../blog/Blog";
 import axios from "axios";
-import Recrutari from "../recrutari/Recrutari";
+import Banner from "../recrutari/Banner";
 import Container from "@material-ui/core/Container";
 
 let page = 1;
@@ -25,7 +25,11 @@ const Home = () => {
 
 	return (
 		<>
+<<<<<<< HEAD
 			<Recrutari />
+=======
+			<Banner />
+>>>>>>> 0bb4a57f4516dc857654fd31886243897995a3f3
 			<Container maxWidth="lg">
 				{items.length > 0 ? <Blog items={items} categorii={categ} /> : ""}
 				{/* <Separator /> */}

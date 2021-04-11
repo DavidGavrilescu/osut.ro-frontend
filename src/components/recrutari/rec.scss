@@ -6,6 +6,7 @@
 		padding: 20px;
 		overflow: hidden;
 		position: relative;
+		
 		// min-height: 360px;
 		// *,
 		// + *,
@@ -27,5 +28,13 @@
 		#slid{
 			background: white;
 		}
+	}
+}
+@media screen and (min-width: 1000px) {
+	#containerAnunturi .slide{
+		background-image:url(https://redirectioneaza.ro/images/logo-smaller.png);
+		background-position-x:right;
+		background-size:contain;
+		background-repeat:no-repeat;
 	}
 }
