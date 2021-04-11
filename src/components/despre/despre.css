@@ -114,10 +114,6 @@
   padding-bottom: 60px;
 }
 
-.membruEchipa .contact * {
-  display: none;
-}
-
 .membruEchipa img {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;

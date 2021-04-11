@@ -45,7 +45,7 @@ const MembruEchipa = ({ nume_poza, nume, email, telefon, rank }) => {
 							variant="body2"
 							component="strong"
 							gutterBottom>
-							{telefon} &middot; {email}
+							{telefon} {/*&middot;*/} <br /> {email}
 						</Typography>
 					</div>
 				</div>
@@ -81,15 +81,15 @@ const BCE = [
 	{
 		nume: "Ana-Maria ENESCU",
 		functie: "Secretar General",
-		telefon: "0743 914 800",
-		mail: "diana@osut.ro",
+		// telefon: "0743 914 800",
+		// mail: "diana@osut.ro",
 		poza: "ana",
 	},
 	{
 		nume: "Darius-Dragoș ȚEPERDEL",
 		functie: "Coordonator Resurse Umane (HR)",
-		telefon: "0726 062 020",
-		mail: "darius@osut.ro",
+		// telefon: "0726 062 020",
+		// mail: "darius@osut.ro",
 		poza: "darius_teperdel",
 	},
 	// {
@@ -102,44 +102,44 @@ const BCE = [
 	{
 		nume: "Emilian-Andrei BOGDAN",
 		functie: "Coordonator IT și Logistică (IT&L)",
-		telefon: "0752 947 703",
-		mail: "emilian@osut.ro",
+		// telefon: "0752 947 703",
+		// mail: "emilian@osut.ro",
 		poza: "Emilian",
 	},
 	{
 		nume: "Nelea ANGHELEANU",
 		functie: "Coordonator Fundraising (FR)",
-		telefon: "0732 566 663",
-		mail: "nelea@osut.ro",
+		// telefon: "0732 566 663",
+		// mail: "nelea@osut.ro",
 		poza: "neli",
 	},
 	{
 		nume: "Hari-Bogdan RAICU",
 		functie: "Coordonator Imagine",
-		telefon: "0748 536 317",
-		mail: "hari@osut.ro",
+		// telefon: "0748 536 317",
+		// mail: "hari@osut.ro",
 		poza: "hari",
 	},
 	{
 		nume: "Roxana MATEI",
 		functie: "Coordonator Relații Publice (PR)",
-		telefon: "0756 775 685",
-		mail: "cristina@osut.ro",
+		// telefon: "0756 775 685",
+		// mail: "cristina@osut.ro",
 		poza: "Roxana",
 	},
 
 	{
 		nume: "Ionela-Luiza MARINESCU",
 		functie: "Cenzor OSUT",
-		telefon: "0756 775 685",
-		mail: "ionela@osut.ro",
+		// telefon: "0756 775 685",
+		// mail: "ionela@osut.ro",
 		poza: "Oana",
 	},
 	{
 		nume: "Mădălina-Elena PENCIUC",
 		functie: "Cenzor OSUT",
-		telefon: "0724 441 884 ",
-		mail: "madalina@osut.ro",
+		// telefon: "0724 441 884 ",
+		// mail: "madalina@osut.ro",
 		poza: "Mada",
 	},
 ];
