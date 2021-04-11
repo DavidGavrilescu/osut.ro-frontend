@@ -8,6 +8,45 @@ footer#websiteFooter {
   margin-top: 60px;
 }
 
+footer#websiteFooter a.footerLink {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  margin-bottom: 5px;
+  padding: 2px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 22px;
+  overflow: hidden;
+}
+
+footer#websiteFooter a.footerLink p {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 22px;
+}
+
+footer#websiteFooter a.footerLink div.bg {
+  position: absolute;
+  left: -10px;
+  bottom: 0px;
+  background: transparent;
+  width: 0px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  height: 69%;
+  z-index: 0;
+}
+
+footer#websiteFooter a.footerLink:hover div.bg {
+  background: #fff;
+  opacity: 0.1;
+  width: 70%;
+  padding: -10px;
+}
+
 footer#websiteFooter button {
   margin-right: 6px;
   opacity: 0.8;
@@ -37,8 +76,8 @@ footer#websiteFooter a button {
   border-bottom: 2px solid transparent;
   padding-bottom: 0px;
   margin-bottom: 3px;
-  -webkit-transition: border-color 0.1s;
-  transition: border-color 0.1s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 footer#websiteFooter a:hover {
@@ -47,7 +86,8 @@ footer#websiteFooter a:hover {
 
 footer#websiteFooter a:hover button {
   text-decoration: none;
-  border-color: inherit;
+  border-color: none;
+  background: none;
 }
 
 footer#websiteFooter #made {
