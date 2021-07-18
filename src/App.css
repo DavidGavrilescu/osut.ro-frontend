@@ -45,10 +45,6 @@ html #root {
   color: #eee;
 }
 
-section#continut_articol {
-  margin-top: 36px;
-}
-
 section#continut_articol h1,
 section#continut_articol h2,
 section#continut_articol h3,
@@ -171,8 +167,8 @@ section#continut_articol table tbody tr:last-of-type td {
   }
 }
 
-.userway-s6 [role="link"],
-.userway-s6 [role="link"],
+.userway-s6 [role='link'],
+.userway-s6 [role='link'],
 .userway-s6 a,
 .userway-s6 a {
   background: blue !important;

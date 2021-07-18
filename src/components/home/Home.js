@@ -1,37 +1,37 @@
-import React, { useEffect, useState } from "react";
-import Blog from "../blog/Blog";
-import axios from "axios";
-import Banner from "../recrutari/Banner";
-import Container from "@material-ui/core/Container";
+import React, { useEffect, useState } from 'react';
+import Blog from '../blog/Blog';
+import axios from 'axios';
+import Banner from '../recrutari/Banner';
+import Container from '@material-ui/core/Container';
 
 let page = 1;
 
 const Home = () => {
-	const [items, setItems] = useState([]);
-	const [categ, setCateg] = useState([]);
+  const [items, setItems] = useState([]);
+  const [categ, setCateg] = useState([]);
 
-	const [error, setError] = useState(null);
-	const [isLoaded, setIsLoaded] = useState(false);
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-	useEffect(() => {
-		if (items.length < 1) {
-			axios.get(`https://api.osut.ro/?posts`).then((res) => {
-				const postari = res.data;
-				setItems(postari.postari);
-				setCateg(postari.categorii);
-			});
-		}
-	}, [items]);
+  useEffect(() => {
+    if (items.length < 1) {
+      axios.get(`https://api.osut.ro/?posts`).then((res) => {
+        const postari = res.data;
+        setItems(postari.postari);
+        setCateg(postari.categorii);
+      });
+    }
+  }, [items]);
 
-	return (
-		<>
-			<Banner />
-			<Container maxWidth="lg">
-				{items.length > 0 ? <Blog items={items} categorii={categ} /> : ""}
-				{/* <Separator /> */}
-				{/* <Docs /> */}
-			</Container>
-		</>
-	);
+  return (
+    <>
+      {/* <Banner /> */}
+      <Container maxWidth="lg">
+        {items.length > 0 ? <Blog items={items} categorii={categ} /> : ''}
+        {/* <Separator /> */}
+        {/* <Docs /> */}
+      </Container>
+    </>
+  );
 };
 export default Home;
