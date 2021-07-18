@@ -1,50 +1,50 @@
 .feedback {
-	text-align: left;
-	width: 100%;
-	box-shadow: none;
-	margin-left: 0px;
-	padding: 30px 0px;
-	padding-bottom: 20px;
-	border-radius: 0px;
-	margin: 30px 0px;
-	margin-bottom: 10px;
-	&:hover {
-		//background: rgba(255, 255, 255, 0.05);
-	}
-	p {
-		padding: 0px 0px;
-	}
+  text-align: left;
+  width: 100%;
+  box-shadow: none;
+  margin-left: 0px;
+  padding: 20px 0px;
+  padding-bottom: 20px;
+  border-radius: 0px;
+  margin: 20px 0px;
+  margin-bottom: 10px;
+  &:hover {
+    //background: rgba(255, 255, 255, 0.05);
+  }
+  p {
+    padding: 0px 0px;
+  }
 }
 .dark_mode {
-	.feedback {
-		border-top: 1px solid rgba(255, 255, 255, 0.1);
-	}
+  .feedback {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
 .light_mode {
-	.feedback {
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
-	}
+  .feedback {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }
 @media only screen and (max-width: 800px) {
-	.feedback {
-		text-align: left;
-		width: 100%;
-		box-shadow: none;
-		margin-left: 0px;
-		padding: 30px 0px;
-		padding-bottom: 0px;
-		border-radius: 0px;
-		margin: 30px 0px;
-		margin-bottom: 10px;
-		&:hover {
-			//background: rgba(255, 255, 255, 0.05);
-		}
-		p {
-			padding: 0px 0px;
-			display: block;
-		}
-		#buttonsFeedback {
-			display: block;
-		}
-	}
+  .feedback {
+    text-align: left;
+    width: 100%;
+    box-shadow: none;
+    margin-left: 0px;
+    padding: 20px 0px;
+    padding-bottom: 0px;
+    border-radius: 0px;
+    margin: 20px 0px;
+    margin-bottom: 10px;
+    &:hover {
+      //background: rgba(255, 255, 255, 0.05);
+    }
+    p {
+      padding: 0px 0px;
+      display: block;
+    }
+    #buttonsFeedback {
+      display: block;
+    }
+  }
 }

@@ -1,20 +1,20 @@
 body,
 html {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	margin: 0px;
-	img {
-		user-drag: none;
-		user-select: none;
-		-moz-user-select: none;
-		-webkit-user-drag: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-	}
-	#root {
-		height: 100%;
-	}
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+  #root {
+    height: 100%;
+  }
 }
 
 // a{
@@ -26,144 +26,144 @@ html {
 // }
 
 .unselectable {
-	user-select: none;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
-	-o-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 ::selection {
-	background: rgb(223, 47, 47);
-	color: #eee;
+  background: rgb(223, 47, 47);
+  color: #eee;
 }
 
 section#continut_articol {
-	margin-top: 36px;
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-size: 1.6rem;
-		line-height: 2.8rem;
-		margin: 0px;
-		margin-bottom: 20px;
-		font-weight: 100;
-	}
-	a {
-		color: rgb(208, 32, 33);
-		padding: 2px;
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-	table {
-		width: 100%;
-		margin: 30px 0px;
-		border-collapse: collapse;
-		margin: 25px 0;
-		font-size: 0.9em;
-		td {
-			padding-top: 14px;
-			vertical-align: top;
-			padding-left: 3px;
-		}
-		tbody tr {
-			border-bottom: 1px solid rgba(100, 100, 100, 0.2);
-		}
+  // margin-top: 36px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin: 0px;
+    margin-bottom: 20px;
+    font-weight: 100;
+  }
+  a {
+    color: rgb(208, 32, 33);
+    padding: 2px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  table {
+    width: 100%;
+    margin: 30px 0px;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    td {
+      padding-top: 14px;
+      vertical-align: top;
+      padding-left: 3px;
+    }
+    tbody tr {
+      border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+    }
 
-		tbody tr:nth-of-type(even) {
-			background-color: rgba(100, 100, 100, 0.1);
-		}
+    tbody tr:nth-of-type(even) {
+      background-color: rgba(100, 100, 100, 0.1);
+    }
 
-		tbody tr:last-of-type {
-			//	border-bottom: 1px solid rgb(208, 32, 33);
-			td {
-				padding-bottom: 10px;
-			}
-		}
-	}
+    tbody tr:last-of-type {
+      //	border-bottom: 1px solid rgb(208, 32, 33);
+      td {
+        padding-bottom: 10px;
+      }
+    }
+  }
 }
 
 .MuiDialog-root {
-	transition: backdrop-filter 0.3s;
-	backdrop-filter: blur(1.5px);
+  transition: backdrop-filter 0.3s;
+  backdrop-filter: blur(1.5px);
 }
 
 #msg {
-	border-bottom: 1px solid rgba(125, 125, 155, 0.15);
-	padding: 10px 0px;
-	text-align: center;
+  border-bottom: 1px solid rgba(125, 125, 155, 0.15);
+  padding: 10px 0px;
+  text-align: center;
 }
 .MuiPaper-root {
-	//background: url(http://api.thumbr.it/whitenoise-361x370.png?background=1d222e00&noise=626262&density=13&opacity=7);
-	// background: url(https://old.osut.ro/echipa/adrian_breha2.jpg);
-	// background-size: cover;
+  //background: url(http://api.thumbr.it/whitenoise-361x370.png?background=1d222e00&noise=626262&density=13&opacity=7);
+  // background: url(https://old.osut.ro/echipa/adrian_breha2.jpg);
+  // background-size: cover;
 }
 
 #headerGlobal {
-	button {
-		margin: 0px 5px;
-	}
+  button {
+    margin: 0px 5px;
+  }
 }
 
 .MuiSelect-select:focus {
-	background: none !important; // select input fara background dupa selectare (ex: homepage)
+  background: none !important; // select input fara background dupa selectare (ex: homepage)
 }
 
 .line-wrap {
-	overflow: hidden;
-	height: 100%;
-	width: 100%;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 .post_mare {
-	margin: 0px auto;
-	img#poza_articol {
-		width: 100%;
-		margin: 0px auto;
-		display: block;
-		border-radius: 10px 10px 0px 0px;
-	}
-	#bg {
-		background-size: 100%;
-	}
-	#meta {
-		height: 100px;
-		width: 100%;
-		line-height: 100px;
-		vertical-align: center;
-		color: #eee;
-		span,
-		div {
-			display: inline-block;
-			color: red;
-			float: left;
-			transform: scale(0.7);
-		}
-		span {
-			margin-right: -50px;
-			color: #222;
-		}
-	}
+  margin: 0px auto;
+  img#poza_articol {
+    width: 100%;
+    margin: 0px auto;
+    display: block;
+    border-radius: 10px 10px 0px 0px;
+  }
+  #bg {
+    background-size: 100%;
+  }
+  #meta {
+    height: 100px;
+    width: 100%;
+    line-height: 100px;
+    vertical-align: center;
+    color: #eee;
+    span,
+    div {
+      display: inline-block;
+      color: red;
+      float: left;
+      transform: scale(0.7);
+    }
+    span {
+      margin-right: -50px;
+      color: #222;
+    }
+  }
 }
 @media (max-width: 960px) {
-	.post_mare {
-		img#poza_articol {
-			width: 100%;
-			border-radius: 0px;
-		}
-	}
+  .post_mare {
+    img#poza_articol {
+      width: 100%;
+      border-radius: 0px;
+    }
+  }
 }
 
-.userway-s6 [role="link"],
-.userway-s6 [role="link"],
+.userway-s6 [role='link'],
+.userway-s6 [role='link'],
 .userway-s6 a,
 .userway-s6 a {
-	background: blue !important;
-	color: white;
+  background: blue !important;
+  color: white;
 }
 
 /* width */
@@ -187,24 +187,24 @@ section#continut_articol {
 // 	background: rgba(255, 255, 255, 0.4) !important;
 // }
 #contact a {
-	color: rgb(208, 33, 33) !important;
-	margin-top: 4px;
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
+  color: rgb(208, 33, 33) !important;
+  margin-top: 4px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .switch-wrapper {
-	position: relative;
+  position: relative;
 }
 
 #root {
-	width: 100%;
+  width: 100%;
 }
 body.isDark {
-	background-color: #1d222e !important;
+  background-color: #1d222e !important;
 }
 body.isLight {
-	background-color: #fff !important;
+  background-color: #fff !important;
 }

@@ -13,6 +13,7 @@
     "axios": "^0.21.1",
     "gsap": "^3.5.1",
     "intl-relativeformat": "^6.4.3",
+    "javascript-time-ago": "^2.3.8",
     "material-ui-image": "^3.2.3",
     "material-ui-toggle-icon": "^1.0.6",
     "prop-types": "^15.7.2",
@@ -29,6 +30,7 @@
     "react-router-transition": "^2.0.0",
     "react-scripts": "^4.0.0",
     "react-slick": "^0.27.13",
+    "react-time-ago": "^7.0.0",
     "react-transition-group": "^4.4.1",
     "styled-components": "^5.2.1"
   },
