@@ -2,3 +2,5 @@
 
 Frontend app for https://osut.ro<br />
 </hr>
+
+This project is no longer maintained. 
