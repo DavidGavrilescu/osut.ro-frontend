@@ -10,7 +10,7 @@
     "@material-ui/lab": "^4.0.0-alpha.56",
     "@material-ui/pickers": "^3.2.10",
     "@steveeeie/react-page-transition": "^1.2.0",
-    "axios": "^0.21.2",
+    "axios": "^1.8.2",
     "gsap": "^3.6.0",
     "intl-relativeformat": "^6.4.3",
     "javascript-time-ago": "^2.3.8",
