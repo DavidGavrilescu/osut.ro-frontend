@@ -1,41 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { Grid } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
-import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
-import { Link, NavLink } from "react-router-dom";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import Paper from "@material-ui/core/Paper";
 import InputBase from "@material-ui/core/InputBase";
-import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
-import DirectionsIcon from "@material-ui/icons/Directions";
 import Tooltip from "@material-ui/core/Tooltip";
 import { makeStyles } from "@material-ui/styles";
 import CloseIcon from "@material-ui/icons/Close";
-import { slugify } from "../reuse/Functions";
 import Helmet from "react-helmet";
 import AdditionalResults from "./AdditionalResults";
 
-const local = "https://api.osut.ro";
+const API_BASE = "https://api.osut.ro";
+
+const ANIMALS = [
+	"🐭", "🐹", "🐰", "🐶", "🐺", "🦊", "🐯", "🦁", "🦒", "🦓",
+	"🐴", "🐮", "🐷", "🐽", "🐻", "🐼", "🐸", "🐲", "🦄", "🐵",
+	"🙈", "🙉", "🙊", "🐱", "🐾", "😸", "😹", "😺", "😼", "😻",
+	"😽", "😾", "😿", "🙀", "🐅", "🐆", "🐘", "🦏", "🦛", "🐃",
+	"🐂", "🐄", "🐒", "🦍", "🦧", "🦥", "🦘", "🐨", "🦌", "🐐",
+	"🐏", "🐑", "🐎", "🦙", "🐪", "🐫", "🐗", "🐖", "🐉", "🦖",
+	"🦕", "🐈", "🐕", "🐩", "🐇", "🦨", "🦝", "🦡", "🦔", "🦦",
+	"🐀", "🐁", "🦇", "🐍", "👣", "🐦", "🦅", "🦉", "🦜", "🦩",
+	"🐧", "🦚", "🦃", "🦢", "🦆", "🐓", "🐔", "🐣", "🐤", "🐥",
+	"🐋", "🐳", "🐬", "🦈", "🐟", "🐠", "🐡", "🐙", "🦑", "🦐",
+	"🦀", "🐚", "🐌", "🦞", "🦪", "🐢", "🦎", "🐊", "🏇", "🎠",
+];
+const randAnimal = () => ANIMALS[Math.floor(Math.random() * ANIMALS.length)];
 
 const useStyles = makeStyles((theme) => ({
-	backdrop: {
-		zIndex: theme.zIndex.drawer + 1,
-		color: "#fff",
-		backdropFilter: "blur(10px)",
-	},
-	title: {
-		flexGrow: 1,
-		fontWeight: "bold",
-	},
-	link: {
-		textDecoration: "none",
-	},
-	inputPanica: {
-		marginBottom: "20px",
-	},
 	root: {
 		padding: "7px 4px",
 		display: "flex",
@@ -49,10 +44,6 @@ const useStyles = makeStyles((theme) => ({
 	iconButton: {
 		padding: 10,
 	},
-	divider: {
-		height: 28,
-		margin: 4,
-	},
 	card: {
 		display: "flex",
 		flexDirection: "column",
@@ -62,153 +53,26 @@ const useStyles = makeStyles((theme) => ({
 
 const Cautare = ({ dark, inchide }) => {
 	const [input, setInput] = useState("");
-	const animals = [
-		"🐭",
-		"🐹",
-		"🐰",
-		"🐶",
-		"🐺",
-		"🦊",
-		"🐯",
-		"🦁",
-		"🦒",
-		"🦓",
-		"🐴",
-		"🐮",
-		"🐷",
-		"🐽",
-		"🐻",
-		"🐼",
-		"🐸",
-		"🐲",
-		"🦄",
-		"🐵",
-		"🙈",
-		"🙉",
-		"🙊",
-		"🐱",
-		"🐾",
-		"😸",
-		"😹",
-		"😺",
-		"😼",
-		"😻",
-		"😽",
-		"😾",
-		"😿",
-		"🙀",
-		"🐅",
-		"🐆",
-		"🐘",
-		"🦏",
-		"🦛",
-		"🐃",
-		"🐂",
-		"🐄",
-		"🐒",
-		"🦍",
-		"🦧",
-		"🦥",
-		"🦘",
-		"🐨",
-		"🦌",
-		"🐐",
-		"🐏",
-		"🐑",
-		"🐎",
-		"🦙",
-		"🐪",
-		"🐫",
-		"🐗",
-		"🐖",
-		"🐉",
-		"🦖",
-		"🦕",
-		"🐈",
-		"🐕",
-		"🐩",
-		"🐇",
-		"🦨",
-		"🦝",
-		"🦡",
-		"🦔",
-		"🦦",
-		"🐀",
-		"🐁",
-		"🦇",
-		"🐍",
-		"👣",
-		"🐦",
-		"🦅",
-		"🦉",
-		"🦜",
-		"🦩",
-		"🐧",
-		"🦚",
-		"🦃",
-		"🦢",
-		"🦆",
-		"🐓",
-		"🐔",
-		"🐣",
-		"🐤",
-		"🐥",
-		"🐋",
-		"🐳",
-		"🐬",
-		"🦈",
-		"🐟",
-		"🐠",
-		"🐡",
-		"🐙",
-		"🦑",
-		"🦐",
-		"🦀",
-		"🐚",
-		"🐌",
-		"🦞",
-		"🦪",
-		"🐢",
-		"🦎",
-		"🐊",
-		"🏇",
-		"🎠",
-		"🐀",
-		"🐃",
-		"🐅",
-		"🐇",
-		"🐉",
-		"🐍",
-		"🐎",
-		"🐐",
-		"🐒",
-		"🐓",
-		"🐕",
-		"🐖",
-	];
-	const randAnimal = () => animals[Math.floor(Math.random() * animals.length)];
-
 	const [rezultate, setRezultate] = useState([]);
 	const [rezultateIS, setRezultateIS] = useState([]);
 	const [cats, setCats] = useState(randAnimal());
+	const debounceTimer = useRef(null);
 
 	const classes = useStyles();
-	let bgSearch = dark ? "#262B36" : "#fefefe";
-	useEffect(() => {
-		if (input !== "") {
-			/// blog
-			const apiUrl = `${local}?cautare=${input}`;
-			axios.get(apiUrl).then((res) => {
-				let rez = res.data;
-				setRezultate(rez.rezultate);
-			});
+	const bgSearch = dark ? "#262B36" : "#fefefe";
 
-			const apiUrl2 = `${local}?cautare_info_studenti=${input}`;
-			axios.get(apiUrl2).then((res) => {
-				let rez = res.data;
-				setRezultateIS(rez.rezultate);
+	useEffect(() => {
+		if (input === "") return;
+		clearTimeout(debounceTimer.current);
+		debounceTimer.current = setTimeout(() => {
+			axios.get(`${API_BASE}?cautare=${input}`).then((res) => {
+				setRezultate(res.data.rezultate);
 			});
-		}
+			axios.get(`${API_BASE}?cautare_info_studenti=${input}`).then((res) => {
+				setRezultateIS(res.data.rezultate);
+			});
+		}, 300);
+		return () => clearTimeout(debounceTimer.current);
 	}, [input]);
 
 	return (
@@ -247,10 +111,6 @@ const Cautare = ({ dark, inchide }) => {
 										autoFocus={true}
 										onChange={(e) => setInput(e.target.value)}
 									/>
-									{/* <IconButton type="submit" className={classes.iconButton} aria-label="search">
-        <SearchIcon />
-      </IconButton>
-      <Divider className={classes.divider} orientation="vertical" /> */}
 									<IconButton
 										color="default"
 										className={classes.iconButton}
@@ -277,16 +137,14 @@ const Cautare = ({ dark, inchide }) => {
 							direction="row"
 							alignItems="stretch"
 							alignContent="stretch">
-							{rezultate.length !== [] && input.toLowerCase() == "meow" && (
+							{input.toLowerCase() === "meow" && (
 								<h1
 									style={{ userSelect: "none" }}
-									onClick={() => {
-										setCats(cats + "" + randAnimal());
-									}}>
+									onClick={() => setCats(cats + "" + randAnimal())}>
 									{cats}
 								</h1>
 							)}
-							{rezultate.length !== [] && rezultate.length > 0 && input !== "" && (
+							{rezultate.length > 0 && input !== "" && (
 								<Typography
 									color="primary"
 									variant="h5"
@@ -299,9 +157,7 @@ const Cautare = ({ dark, inchide }) => {
 									Articole:
 								</Typography>
 							)}
-
-							{rezultate.length !== [] &&
-								input !== "" &&
+							{input !== "" &&
 								rezultate.map((item) => (
 									<Grid
 										key={item.id}
@@ -328,23 +184,20 @@ const Cautare = ({ dark, inchide }) => {
 										</Link>
 									</Grid>
 								))}
-							{rezultateIS.length !== [] &&
-								rezultateIS.length > 0 &&
-								input !== "" && (
-									<Typography
-										color="primary"
-										variant="h5"
-										style={{
-											fontWeight: 300,
-											textTransform: "uppercase",
-											marginTop: 40,
-											marginBottom: 20,
-										}}>
-										Info studenți:
-									</Typography>
-								)}
-							{rezultateIS.length !== [] &&
-								input !== "" &&
+							{rezultateIS.length > 0 && input !== "" && (
+								<Typography
+									color="primary"
+									variant="h5"
+									style={{
+										fontWeight: 300,
+										textTransform: "uppercase",
+										marginTop: 40,
+										marginBottom: 20,
+									}}>
+									Info studenți:
+								</Typography>
+							)}
+							{input !== "" &&
 								rezultateIS.map((item) => (
 									<Grid
 										key={item.id}
