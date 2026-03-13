@@ -37,14 +37,9 @@ const BlogPage = () => {
 
 	const classes = useStyles();
 	const [items, setItems] = useState([]);
-	const [categorie, setCategorie] = useState("toate");
 	const [categorii, setCategorii] = useState([]);
-
-	const [view, setView] = useState("grid");
 	const [numarPagini, setNumarPagini] = useState(null);
-
 	const [page, setPage] = useState(id ? id : 1);
-	const [filtru, setFiltru] = useState(false);
 	const [categorieSelectata, setCategorieSelectata] = useState(
 		categ !== undefined ? categ : "toate"
 	);
@@ -53,7 +48,7 @@ const BlogPage = () => {
 
 	const handleChange = (event, value) => {
 		setPage(value);
-		history.push("/blog/" + value + "/" + categorie);
+		history.push("/blog/" + value + "/" + categorieSelectata);
 	};
 	const handleChangeCategorie = (event, value) => {
 		setCategorieSelectata(event.target.value);
@@ -108,26 +103,25 @@ const BlogPage = () => {
 											onChange={handleChangeCategorie}
 											disableUnderline={true}>
 											<MenuItem value={"toate"}>Toate categoriile</MenuItem>
-											{categorii !== [] &&
-												categorii.map((categorie) => (
-													<MenuItem
-														key={categorie.id_categorie}
-														value={categorie.id_categorie}>
-														{categorie.denumire_categorie}
-													</MenuItem>
-												))}
+											{categorii.map((cat) => (
+												<MenuItem
+													key={cat.id_categorie}
+													value={cat.id_categorie}>
+													{cat.denumire_categorie}
+												</MenuItem>
+											))}
 										</Select>
 									</FormControl>
 								</Grid>
 							</Toolbar>
 						</Grid>
-						{items.length == [] && (
+						{items.length === 0 && (
 							<Grid item xs={12} style={{ textAlign: "center" }}>
 								<Loader />
 								Se încarcă...
 							</Grid>
 						)}
-						{items.length !== [] &&
+						{items.length > 0 &&
 							items.map((item) => (
 								<Grid
 									key={item.id}

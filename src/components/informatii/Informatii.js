@@ -80,11 +80,8 @@ const Informatie = ({ titlu, descriere, link }) => {
 const Informatii = () => {
 	const [info, setInfo] = useState([]);
 	useEffect(() => {
-		if (info.length == 0) {
-			incarcaInformatiiStudenti(setInfo, "informatii");
-		}
-		console.log("informatii");
-	});
+		incarcaInformatiiStudenti(setInfo, "informatii");
+	}, []);
 	return (
 		<>
 			<Container maxWidth="lg" id="centru_ajutor" style={{ marginTop: "30px" }}>

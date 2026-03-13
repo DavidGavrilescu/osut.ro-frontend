@@ -23,10 +23,10 @@ const IntrebariInformatii = () => {
 	let { categorie } = useParams();
 
 	useEffect(() => {
-		if (categorii.length == 0) {
-			incarcaInformatiiStudenti(setCategorii, "intrebari informatii");
-		}
-		console.log("intrebariinfromatii");
+		incarcaInformatiiStudenti(setCategorii, "intrebari informatii");
+	}, []);
+
+	useEffect(() => {
 		incarcaIntrebariInformatiiStudenti(categorie, setInfo, (r) => {
 			setDen(r);
 		});

@@ -4,150 +4,93 @@ import TimeAgo from 'javascript-time-ago';
 import ro from 'javascript-time-ago/locale/ro';
 
 TimeAgo.addDefaultLocale(ro);
-// import IntlRelativeFormat from "intl-relativeformat";
 
 const urlAPI = `https://api.osut.ro/`;
+const timeAgo = new TimeAgo('ro-RO');
 
 export const getParteneri = (callback) => {
-  const url = `${urlAPI}?getParteneri`;
-  axios.get(url).then((res) => {
+  axios.get(`${urlAPI}?getParteneri`).then((res) => {
     callback(res.data);
   });
 };
-//itntrebari frecvente
+
 export const getFAQ = (setFAQ) => {
-  const url = `${urlAPI}?faq`;
-  axios.get(url).then((res) => {
+  axios.get(`${urlAPI}?faq`).then((res) => {
     setFAQ(res.data[0]);
   });
 };
 
-// folosit de ultima sub-pagina a informatii studenti
-export const incarcaRaspunsIntrebareIS = (
-  informatie,
-  setDocs,
-  setInfo,
-  callback
-) => {
-  const url = `${urlAPI}?informatie=${informatie}`;
-  axios.get(url).then((res) => {
+export const incarcaRaspunsIntrebareIS = (informatie, setDocs, setInfo, callback) => {
+  axios.get(`${urlAPI}?informatie=${informatie}`).then((res) => {
     setInfo(res.data.informatie);
     setDocs(res.data.atasamente);
     callback(res.data.denInfo);
   });
 };
-// folosit de informatii studenti
+
 export const incarcaIntrebariInformatiiStudenti = (categorie, setInfo, cb) => {
-  const url = `${urlAPI}?informatii=${categorie}`;
-  axios.get(url).then((res) => {
+  axios.get(`${urlAPI}?informatii=${categorie}`).then((res) => {
     setInfo(res.data.r);
     cb(res.data.den);
   });
 };
 
-// folosit de Informatii.js / IntrebariInformatii.js
 export const incarcaInformatiiStudenti = (setInfo) => {
-  const url = `${urlAPI}?informatii_studenti`;
-  axios
-    .get(url)
-    .then((res) => {
-      setInfo(res.data[0]);
-    })
-    .then(() => {
-      // const timelineGsap = gsap.timeline({ duration: 0.1, stagger: 0.15 });
-      // timelineGsap.from(".sectiune", {
-      // 	ease: Power2.easeInOut,
-      // 	duration: 0.04,
-      // 	scale: 1.05,
-      // 	x: -60,
-      // 	opacity: 0,
-      // 	stagger: 0.09,
-      // });
-    });
+  axios.get(`${urlAPI}?informatii_studenti`).then((res) => {
+    setInfo(res.data[0]);
+  });
 };
 
-export const feedbackArticol = (feedbackArticol, mesaj, id, callback) => {
-  const url = `${urlAPI}?feedbackArticol=${feedbackArticol}&mesaj=${mesaj}&articol=${id}`;
-  axios.get(url).then((res) => {
+export const feedbackArticol = (feedback, mesaj, id, callback) => {
+  axios.get(`${urlAPI}?feedbackArticol=${feedback}&mesaj=${mesaj}&articol=${id}`).then((res) => {
     callback(res.data);
   });
 };
 
-// folosit de Singlet.js
-export const incarcaArticol = (
-  postID,
-  setTime,
-  setArticol,
-  setRelated,
-  setAttachments,
-  cb
-) => {
-  const url = `${urlAPI}?posts&id=${postID}`;
-  // let rf = new IntlRelativeFormat("ro-RO");
-  const timeAgo = new TimeAgo('ro-RO');
-
-  axios
-    .get(url)
-    .then((res) => {
-      const articol = res.data;
-      setArticol(articol.postari[0]);
-      setAttachments(articol.attachments);
-      // let ago = rf.format(new Date(articol.postari[0].timestamp * 1000));
-      let ago = articol.postari[0].timestamp * 1000;
-
-      setTime(timeAgo.format(Number(ago)));
-      setRelated(articol.related);
-    })
-    .then(() => {
-      cb();
-    });
+export const incarcaArticol = (postID, setTime, setArticol, setRelated, setAttachments, cb) => {
+  axios.get(`${urlAPI}?posts&id=${postID}`).then((res) => {
+    const articol = res.data;
+    setArticol(articol.postari[0]);
+    setAttachments(articol.attachments);
+    setTime(timeAgo.format(Number(articol.postari[0].timestamp * 1000)));
+    setRelated(articol.related);
+    cb();
+  });
 };
 
-// folosit de pagina /blog
-export const incarcaArticoleBlog = async (
+export const incarcaArticoleBlog = (
   setPagini,
   setPostari,
   setCategorii,
   page = 1,
   categorieSelectata = 'toate'
 ) => {
-  let url = `${urlAPI}?posts&page=${page}&categorie=${categorieSelectata}&per_page=9`;
-  await axios
-    .get(url)
-    .then((res) => {
-      const postari = res.data;
-      setPagini(postari.numarPagini);
-      setPostari(postari.postari);
-      setCategorii(postari.categorii);
-
-      console.log(postari);
-    })
-    .then(() => {
-      const timelineGsap = gsap.timeline({ duration: 0.1, stagger: 0.1 });
-      timelineGsap.from('.thepostcard', {
-        ease: Power2.easeInOut,
-        duration: 0.04,
-        scale: 1.05,
-        y: -60,
-        opacity: 0,
-        stagger: 0.09,
-      });
+  const url = `${urlAPI}?posts&page=${page}&categorie=${categorieSelectata}&per_page=9`;
+  axios.get(url).then((res) => {
+    const postari = res.data;
+    setPagini(postari.numarPagini);
+    setPostari(postari.postari);
+    setCategorii(postari.categorii);
+    const timelineGsap = gsap.timeline({ duration: 0.1, stagger: 0.1 });
+    timelineGsap.from('.thepostcard', {
+      ease: Power2.easeInOut,
+      duration: 0.04,
+      scale: 1.05,
+      y: -60,
+      opacity: 0,
+      stagger: 0.09,
     });
+  });
 };
 
-// folosit de homepage
 export const getPosts = (update, per_page = 6, category = 'toate', cb) => {
-  let url = `${urlAPI}?posts&per_page=${per_page}&categorie=${category}`;
-  if (category === 'toate') url = `${urlAPI}?posts&per_page=${per_page}`;
-  axios
-    .get(url)
-    .then((res) => {
-      const postari = res.data.postari;
-      update(postari);
-    })
-    .then(() => {
-      cb();
-    });
+  const url = category === 'toate'
+    ? `${urlAPI}?posts&per_page=${per_page}`
+    : `${urlAPI}?posts&per_page=${per_page}&categorie=${category}`;
+  axios.get(url).then((res) => {
+    update(res.data.postari);
+    cb();
+  });
 };
 
 const API = () => {};
